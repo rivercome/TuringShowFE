@@ -28,7 +28,8 @@ class ApplyTuring extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
     this.checkTeamName = this.checkTeamName.bind(this)
     this.handleReset = this.handleReset.bind(this)
-  }
+  }1234
+
 
   handleSubmit (e) {
     e.preventDefault()

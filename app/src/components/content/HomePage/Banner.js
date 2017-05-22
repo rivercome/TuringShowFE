@@ -4,6 +4,7 @@ import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import goto from '../../../utils/goto'
+// import logoLight from '../../../static/images/acm_logo_light.png'
 class Banner extends React.Component {
   render() {
     const props = { ...this.props };
@@ -26,7 +27,13 @@ class Banner extends React.Component {
             key="title"
             id={`${props.id}-title`}
           >
-            <img width="100%" src="https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png" />
+            <br />
+            <span className="title-number">1</span>支队
+            <span className="title-number">3</span>个人
+
+            <br />
+            <span className="title-number">5</span>小时
+            <span className="title-number">10</span>道题
           </span>
           <p
             key="content"
@@ -34,7 +41,7 @@ class Banner extends React.Component {
           >
             一场代码的较量！
           </p>
-            <Button type="ghost" key="button" id={`${props.id}-button`} onClick={()=>goto('/applyTurning')}>
+          <Button type="ghost" key="button" id={`${props.id}-button`} onClick={()=>goto('/applyTurning')}>
             直接报名
           </Button>
         </QueueAnim>
@@ -43,6 +50,8 @@ class Banner extends React.Component {
           className={`${props.className}-icon`}
           key="icon"
         >
+          <span style={{fontSize: 10}}>ACM 图灵杯团队赛</span>
+          <br />
           <Icon type="down" />
         </TweenOne>
       </OverPack>

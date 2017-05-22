@@ -36,10 +36,12 @@ class ContentLeft extends React.Component {
             id={`${props.id}-textWrapper`}
           >
             <h1 key="h1" id={`${props.id}-title`}>
-              分布式中间件
+              What is CCPC/ICPC?
             </h1>
             <p key="p" id={`${props.id}-content`}>
-              金融级联机交易处理中间件，大规模分布式计算机，数万笔/秒级并发能力，严格保证交易数据统一性。金融级联机交易处理中间件，大规模分布式计算机，数万笔/秒级并发能力，严格保证交易数据统一性。
+              International Collegiate Programming Contest / China Collegiate Programming Contest。
+              <br />
+              最顶级的程序设计竞赛舞台，最庞大的程序设计年度赛事，旨在激励当代大学生运用计算机编程技术和技能来解决实际问题，激发其学习算法和程序设计的兴趣，培养其团队合作意识、创新能力和挑战精神。
             </p>
           </QueueAnim>
           <TweenOne

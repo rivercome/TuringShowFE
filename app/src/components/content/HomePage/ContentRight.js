@@ -46,10 +46,13 @@ class ContentRight extends React.Component {
             id={`${props.id}-textWrapper`}
           >
             <h1 key="h1" id={`${props.id}-title`}>
-              企业资源管理
+              What is ACM?
             </h1>
             <p key="p" id={`${props.id}-content`}>
-              云资源集中编排、弹性伸缩、持续发布和部署，高可用及容灾。云资源集中编排、弹性伸缩、持续发布和部署，高可用及容灾。云资源集中编排、弹性伸缩、持续发布和部署，高可用及容灾。
+              Association for Computing Machinery，计算机协会。
+              <br />
+              NEUQ ACMCLub，东秦最出彩的计算机俱乐部，我们有最专业的竞赛团队，我们有最前沿的竞赛资源，我们有最专业的竞赛培训体制。
+              我们与计算机与通信工程学院强强联合，为您共同打造一场编程盛会！
             </p>
           </QueueAnim>
         </OverPack>

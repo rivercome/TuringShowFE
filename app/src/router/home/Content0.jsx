@@ -3,9 +3,10 @@ import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 
-class SexPart extends React.Component {
+class Content extends React.Component {
+
   static defaultProps = {
-    className: 'sex-part',
+    className: 'content2',
   };
 
   getDelay = e => e % 3 * 100 + Math.floor(e / 3) * 100 + 300;
@@ -90,4 +91,4 @@ class SexPart extends React.Component {
 }
 
 
-export default SexPart;
+export default Content;
