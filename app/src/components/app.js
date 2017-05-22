@@ -40,14 +40,19 @@ class AppComponent extends Component {
   }
 
   render () {
-    const {path} = this.props.routes[1] || '/'
+    const {path = 'home'} = this.props.routes[1]
     const footer = () => {
-      if (path === '/' || path === '/applyTurning')
+      if (path === '/' || path === 'applyTurning' || path === 'home')
         return <Footer id="footer" key="footer" isMode={this.state.isMode} />
+    }
+    const nav= ()=> {
+      if (path !== '/' && path !== 'home') {
+        return <Nav id="nav" key="nav" isMode={this.state.isMode} path={[path]} />
+      }
     }
     return (
       <div className="app">
-        <Nav id="nav" key="nav" isMode={this.state.isMode} path={[path]} />
+        {nav()}
         {this.props.children}
         {footer()}
       </div>

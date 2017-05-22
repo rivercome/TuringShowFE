@@ -1,0 +1,24 @@
+.not-found-left {
+    display: inline-block;
+    border-right: 1px solid rgba(0, 0, 0, .3);
+    margin: 0 20px 0 0;
+    padding: 10px 23px 10px 0;
+    font-size: 24px;
+    font-weight: 500;
+    vertical-align: top;
+}
+
+.not-found-right {
+    display: inline-block;
+    text-align: left;
+    line-height: 49px;
+    height: 49px;
+    vertical-align: middle;
+}
+
+.not-found-right-content {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}

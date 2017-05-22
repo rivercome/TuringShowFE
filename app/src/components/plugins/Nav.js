@@ -19,14 +19,14 @@ class Header extends React.Component {
   }
 
   handleClick = (e) => {
-    goto(e.key)
+    goto('/' + e.key)
   }
 
   render () {
     const props = {...this.props}
     const isMode = props.isMode
     delete props.isMode
-    const navData = {'/': '了解图灵杯', '/applyTurning': '报名图灵杯', '/innovation': '科创新知大讲堂'}
+    const navData = {'home': '了解图灵杯', 'applyTurning': '报名图灵杯', 'innovation': '科创新知大讲堂'}
     const navChildren = Object.keys(navData)
       .map((key, i) => (<Item key={key}>{navData[key]}</Item>))
     return (
@@ -59,7 +59,7 @@ class Header extends React.Component {
             className={`${this.props.className}-phone-nav-text`}
           >
             <Menu
-              defaultSelectedKeys={props.path}
+              defaultSelectedKeys={props.path || ['home']}
               mode="inline"
               theme="dark"
               onClick={this.handleClick}
@@ -72,7 +72,7 @@ class Header extends React.Component {
           animation={{x: 30, type: 'from', ease: 'easeOutQuad'}}
         >
           <Menu
-            mode="horizontal" defaultSelectedKeys={props.path}
+            mode="horizontal" defaultSelectedKeys={props.path || ['home']}
             id={`${this.props.id}-menu`}
             onClick={this.handleClick}
           >

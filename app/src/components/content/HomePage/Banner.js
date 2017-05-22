@@ -3,8 +3,8 @@ import { Button, Icon } from 'antd';
 import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-
-class Content extends React.Component {
+import goto from '../../../utils/goto'
+class Banner extends React.Component {
   render() {
     const props = { ...this.props };
     delete props.isMode;
@@ -32,10 +32,10 @@ class Content extends React.Component {
             key="content"
             id={`${props.id}-content`}
           >
-            一个高效的页面动画解决方案
+            一场代码的较量！
           </p>
-          <Button type="ghost" key="button" id={`${props.id}-button`}>
-            Learn More
+            <Button type="ghost" key="button" id={`${props.id}-button`} onClick={()=>goto('/applyTurning')}>
+            直接报名
           </Button>
         </QueueAnim>
         <TweenOne
@@ -50,13 +50,13 @@ class Content extends React.Component {
   }
 }
 
-Content.propTypes = {
+Banner.propTypes = {
   className: PropTypes.string,
   id: PropTypes.string,
 };
 
-Content.defaultProps = {
-  className: 'banner0',
+Banner.defaultProps = {
+  className: 'banner',
 };
 
-export default Content;
+export default Banner;

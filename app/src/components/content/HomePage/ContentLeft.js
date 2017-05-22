@@ -3,10 +3,10 @@ import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 
-class Content extends React.Component {
+class ContentLeft extends React.Component {
 
   static defaultProps = {
-    className: 'content1',
+    className: 'content-left',
   };
 
   render() {
@@ -59,4 +59,4 @@ class Content extends React.Component {
   }
 }
 
-export default Content;
+export default ContentLeft;
