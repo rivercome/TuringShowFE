@@ -28,21 +28,19 @@ class Banner extends React.Component {
             id={`${props.id}-title`}
           >
             <br />
-            <span className="title-number">1</span>支队
-            <span className="title-number">3</span>个人
+            <span className="title-number">科技 · 新知</span>
 
             <br />
-            <span className="title-number">5</span>小时
-            <span className="title-number">10</span>道题
+            <span className="title-number">大讲堂</span>
           </span>
           <p
             key="content"
             id={`${props.id}-content`}
           >
-            一场代码的较量！
+            以新知之手，绘科技未来
           </p>
-          <Button type="ghost" key="button" id={`${props.id}-button`} onClick={()=>goto('/applyTurning')}>
-            直接报名
+          <Button type="ghost" key="button" id={`${props.id}-button`} onClick={()=>goto('/applyInnovation')}>
+            报名大讲堂
           </Button>
         </QueueAnim>
         <TweenOne
@@ -50,7 +48,7 @@ class Banner extends React.Component {
           className={`${props.className}-icon`}
           key="icon"
         >
-          <span style={{fontSize: 10}}>ACM 图灵杯团队赛</span>
+          <span style={{fontSize: 10}}>了解本期大讲堂</span>
           <br />
           <Icon type="down" />
         </TweenOne>

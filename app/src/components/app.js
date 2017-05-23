@@ -11,6 +11,7 @@ import '../static/less/antMotion_style.less'
 import './app.less'
 import Nav from './plugins/Nav'
 import Footer from './plugins/Footer'
+
 class AppComponent extends Component {
   constructor (props) {
     super(props)
@@ -40,14 +41,15 @@ class AppComponent extends Component {
   }
 
   render () {
-    const {path = 'home'} = this.props.routes[1]
-    const footer = () => {
-      if (path === '/' || path === 'applyTurning' || path === 'home')
-        return <Footer id="footer" key="footer" isMode={this.state.isMode} />
-    }
-    const nav= ()=> {
-      if (path !== '/' && path !== 'home') {
+    const {path = 'turning'} = this.props.routes[1]
+    const nav = () => {
+      if (path !== '/' && path !== 'turning' && path !== 'innovation') {
         return <Nav id="nav" key="nav" isMode={this.state.isMode} path={[path]} />
+      }
+    }
+    const footer = () =>{
+      if (path === 'applyTurning' || path === 'applyInnovation') {
+        return <Footer id="footer" key="footer" isMode={this.state.isMode} />
       }
     }
     return (

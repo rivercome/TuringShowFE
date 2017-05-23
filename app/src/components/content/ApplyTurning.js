@@ -9,7 +9,7 @@ import {Link } from 'react-router'
 import 'whatwg-fetch'
 import 'es6-promise'
 import verify from '../../utils/Verify'
-import options from '../../utils/options'
+import options from '../../utils/turningOptions'
 import goto from '../../utils/goto'
 
 import '../../static/css/applyTurning.css'
@@ -28,7 +28,8 @@ class ApplyTuring extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
     this.checkTeamName = this.checkTeamName.bind(this)
     this.handleReset = this.handleReset.bind(this)
-  }1234
+    this.isNeccessary=this.isNeccessary.bind(this)
+  }
 
 
   handleSubmit (e) {
@@ -54,7 +55,7 @@ class ApplyTuring extends React.Component {
           return res.json()
         }).then((json) => {
           if (json.success) {
-            goto('/succ')
+            goto('/success?turning')
           } else {
             message.error(json.message)
           }
@@ -79,6 +80,11 @@ class ApplyTuring extends React.Component {
   handleReset (e) {
     e.preventDefault()
     this.props.form.resetFields()
+  }
+
+  isNeccessary () {
+    const form = this.props.form
+    return form.getFieldValue('memberName2')
   }
 
   render () {
@@ -222,7 +228,7 @@ class ApplyTuring extends React.Component {
           )}
         </FormItem>
         <FormItem
-          label='队员姓名'
+          label='队员1姓名'
           {...formItemLayout}
           key="form-content-member-name-1"
           hasFeedback
@@ -238,7 +244,7 @@ class ApplyTuring extends React.Component {
           )}
         </FormItem>
         <FormItem
-          label='队员专业'
+          label='队员1专业'
           {...formItemLayout}
           key="form-content-member-class-1"
         >
@@ -251,7 +257,7 @@ class ApplyTuring extends React.Component {
           )}
         </FormItem>
         <FormItem
-          label='队员学号'
+          label='队员1学号'
           {...formItemLayout}
           key="form-content-member-class-id-1"
           hasFeedback
@@ -267,7 +273,7 @@ class ApplyTuring extends React.Component {
           )}
         </FormItem>
         <FormItem
-          label='队员姓名'
+          label='队员2姓名'
           {...formItemLayout}
           key="form-content-member-name-2"
           hasFeedback
@@ -276,27 +282,27 @@ class ApplyTuring extends React.Component {
             rules: [{
               pattern: verify.chinese, message: '输入包含非中文字符！'
             }, {
-              required: true, message: '请输入队员姓名'
+              required: this.isNeccessary(), message: '请输入队员姓名'
             }]
           })(
             <Input className='form-content-input' />,
           )}
         </FormItem>
         <FormItem
-          label='队员专业'
+          label='队员2专业'
           {...formItemLayout}
           key="form-content-member-class-2"
         >
           {getFieldDecorator('memberClass2', {
             rules: [{
-              required: true, message: '请选择队员专业'
+              required: this.isNeccessary(), message: '请选择队员专业'
             }]
           })(
             <Cascader options={options} placeholder="请选择队员专业" className='form-content-input' />
           )}
         </FormItem>
         <FormItem
-          label='队员学号'
+          label='队员2学号'
           {...formItemLayout}
           key="form-content-member-class-id-2"
           hasFeedback
@@ -305,7 +311,7 @@ class ApplyTuring extends React.Component {
             rules: [{
               pattern: verify.number, message: '请勿输入非数字字符！'
             }, {
-              required: true, message: '请输入队员学号'
+              required: this.isNeccessary(), message: '请输入队员学号'
             }]
           })(
             <Input className='form-content-input' />,
@@ -329,7 +335,8 @@ class ApplyTuring extends React.Component {
                 onClick={this.handleReset}
                 className='form-button-2'
                 style={{marginLeft: 20}}
-              >重置
+              >
+                重置
               </Button>
 
             </Col>

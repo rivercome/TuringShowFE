@@ -3,7 +3,7 @@
 @rule-about: rule-about;
 .@{rule-about} {
   &-text {
-    width: 35%;
+    width: 40%;
     display: inline-block;
     vertical-align: top;
     position: relative;
@@ -32,7 +32,7 @@
           position: absolute;
         }
         & h2, & p {
-          margin-left: 45px;
+          //margin-left: 25px;
         }
         & h2 {
           font-size: 14px;
@@ -46,14 +46,14 @@
     display: inline-block;
     position: relative;
     float: right;
-    top: 15%;
+    top: 35%;
     right: 5%;
   }
 }
 
 @media screen and (max-width: 767px) {
   .@{rule-about}-wrapper {
-    height: 800px;
+    height: 900px;
     overflow: hidden;
     .@{rule-about} {
       width: 90%;
@@ -66,7 +66,7 @@
         right: auto;
       }
       &-text {
-        height: 430px;
+        //height: 530px;
         > h1 {
           margin: 40px auto 20px;
           font-size: 24px;
@@ -74,6 +74,11 @@
         > h1, > p {
           text-align: center;
         }
+        & ul {
+            & h2, & p {
+              margin-left: 25px;
+            }
+          }
       }
       &-img {
         margin-top: 20px;

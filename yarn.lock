@@ -4484,6 +4484,15 @@ rc-animate@2.x, rc-animate@^2.0.2, rc-animate@^2.3.0, rc-animate@~2.3.0:
     css-animation "^1.3.0"
     prop-types "^15.5.6"
 
+rc-banner-anim@^0.5.12:
+  version "0.5.12"
+  resolved "http://registry.npm.taobao.org/rc-banner-anim/download/rc-banner-anim-0.5.12.tgz#e85d10f8fe87f89223ed85092a4f1f8647715973"
+  dependencies:
+    babel-runtime "6.x"
+    rc-tween-one "~1.1.0"
+    style-utils "~0.1.10"
+    tween-functions "1.x"
+
 rc-calendar@~8.1.0:
   version "8.1.3"
   resolved "http://registry.npm.taobao.org/rc-calendar/download/rc-calendar-8.1.3.tgz#45aadd0942d319378d1d08af3273b399eef7209b"
@@ -4786,6 +4795,16 @@ rc-tween-one@^1.2.5, rc-tween-one@~1.2.5:
     babel-runtime "6.x"
     deep-eql "~2.0.1"
     prop-types "^15.5.0"
+    raf "~3.3.0"
+    style-utils "~0.1.13"
+    tween-functions "~1.2.0"
+
+rc-tween-one@~1.1.0:
+  version "1.1.5"
+  resolved "http://registry.npm.taobao.org/rc-tween-one/download/rc-tween-one-1.1.5.tgz#655a4ca87c7d69fa1dbc30d4c533f5bd749a0842"
+  dependencies:
+    babel-runtime "6.x"
+    deep-eql "~2.0.1"
     raf "~3.3.0"
     style-utils "~0.1.13"
     tween-functions "~1.2.0"
@@ -5537,7 +5556,7 @@ style-loader@^0.13.1:
   dependencies:
     loader-utils "^1.0.2"
 
-style-utils@~0.1.13:
+style-utils@~0.1.10, style-utils@~0.1.13:
   version "0.1.13"
   resolved "http://registry.npm.taobao.org/style-utils/download/style-utils-0.1.13.tgz#9df5c750daa41865f2238fd16f6e12b93a0a26a0"
 

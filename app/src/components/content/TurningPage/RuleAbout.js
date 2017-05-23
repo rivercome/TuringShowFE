@@ -18,7 +18,6 @@ class RuleAbout extends React.Component {
       key={i}
       id={`${this.props.id}-block${i}`}
     >
-
       <h2>{item.title}</h2>
       <p>{item.content}</p>
     </li>);
@@ -28,9 +27,9 @@ class RuleAbout extends React.Component {
     const props = { ...this.props };
     const isMode = props.isMode;
     const dataSource = [
-      {title: '技术', content: '丰富的技术组件，简单组装即可快速搭建金融级应用，丰富的技术组件，简单组装即可快速搭建金融级应用。' },
-      {title: '融合', content: '解放业务及技术生产力，推动金融服务底层创新，推动金融服务底层创新。\n解放业务及技术生产力，推动金融服务底层创新。' },
-      {title: '开发', content: '符合金融及要求的安全可靠、高可用、高性能的服务能力，符合金融及要求的安全可靠、高可用、高性能的服务能力。' },
+      {title: '大赛简介', content: 'NEUQ-ACM “图灵杯” 程序设计大赛是由东北大学秦皇岛分校ACM俱乐部和计算机与通信工程学院联合举办的面向全国大学生的程序设计年度赛事，旨在提升我校程序设计水平，选拔培养程序设计竞赛人才。' },
+      {title: '大赛宗旨', content: '此次竞赛旨在培养我校学生创新能力、团队精神和利用计算机分析问题、解决问题的能力，特别是算法分析与设计能力，发掘培养我校程序设计人才，并为ACM-ICPC/CCPC 等国内外赛事选拔选手和提供演练的机会。' },
+      {title: '往期风采', content: 'NEUQ-ACM "图灵杯" 程序设计大赛始于2012年，在每个学年第一学期举办个人赛，第二学期举办团队赛。自NEUQ-ACM第一届“图灵杯”程序设计大赛以来，累计约有136所高校参赛，在去年11月举办的第四届个人赛中，共有来自清华大学、北京大学、电子科技大学等67所高校的497名选手参赛，覆盖全国各地知名高校。' },
     ];
     const ulChildren = dataSource.map(this.getBlockChildren);
     delete props.isMode;

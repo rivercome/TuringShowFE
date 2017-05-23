@@ -16,6 +16,7 @@
     "gulp": "^3.9.1",
     "gulp-qiniu": "^0.2.4",
     "gulp-sftp": "^0.1.5",
+    "rc-banner-anim": "^0.5.12",
     "rc-queue-anim": "^0.13.3",
     "rc-scroll-anim": "^1.0.4",
     "rc-tween-one": "^1.2.5",

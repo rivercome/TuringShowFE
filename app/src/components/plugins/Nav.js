@@ -26,7 +26,7 @@ class Header extends React.Component {
     const props = {...this.props}
     const isMode = props.isMode
     delete props.isMode
-    const navData = {'home': '了解图灵杯', 'applyTurning': '报名图灵杯', 'innovation': '科创新知大讲堂'}
+    const navData = {'turning': '了解图灵杯', 'innovation': '科技 · 新知','applyTurning': '报名图灵杯','applyInnovation': '报名大讲堂' }
     const navChildren = Object.keys(navData)
       .map((key, i) => (<Item key={key}>{navData[key]}</Item>))
     return (
@@ -39,7 +39,7 @@ class Header extends React.Component {
           animation={{x: -30, type: 'from', ease: 'easeOutQuad'}}
           id={`${this.props.id}-logo`}
         >
-          <img width="100%" src={logo} />
+          <a href="#"><img width="100%" src={logo} /></a>
         </TweenOne>
         {isMode ? (<div
           className={`${this.props.className}-phone-nav${this.state.phoneOpen ? ' open' : ''}`}
@@ -59,7 +59,7 @@ class Header extends React.Component {
             className={`${this.props.className}-phone-nav-text`}
           >
             <Menu
-              defaultSelectedKeys={props.path || ['home']}
+              defaultSelectedKeys={props.path}
               mode="inline"
               theme="dark"
               onClick={this.handleClick}
@@ -72,7 +72,7 @@ class Header extends React.Component {
           animation={{x: 30, type: 'from', ease: 'easeOutQuad'}}
         >
           <Menu
-            mode="horizontal" defaultSelectedKeys={props.path || ['home']}
+            mode="horizontal" defaultSelectedKeys={props.path}
             id={`${this.props.id}-menu`}
             onClick={this.handleClick}
           >

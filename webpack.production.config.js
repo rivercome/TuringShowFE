@@ -87,7 +87,7 @@ module.exports = {
     new webpack.optimize.MinChunkSizePlugin({minChunkSize: 1000}),
     new HtmlWebpackPlugin({
       template: './dist/template.ejs',
-      title: 'React',
+      title: 'NEUQ-ACM 图灵杯',
       favicon: './app/favicon.ico',
       chunks: ['bundle', 'vendors']
     }),
