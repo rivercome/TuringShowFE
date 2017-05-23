@@ -61,7 +61,7 @@ class RuleAbout extends React.Component {
               key="p"
               id={`${props.id}-content`}
             >
-              为每一位东秦 ACMer 提供挑战自我的场景
+              为每一位东秦 ACMer 提供挑战自我的舞台
             </p>
             <QueueAnim
               component="ul"
