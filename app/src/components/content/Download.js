@@ -31,7 +31,7 @@ class Download extends Component {
 
   onClick () {
     const {password, type} = this.state
-    let url = '/api/apply/download?' + 'password=' + this.state.password + '&type=' + this.state.password
+    let url = '/api/apply/download?' + 'password=' + this.state.password + '&type=' + this.state.type
     let a = document.createElement('a')
     a.href = url
     a.target = '_blank'
