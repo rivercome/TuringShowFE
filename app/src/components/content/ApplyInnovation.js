@@ -38,11 +38,9 @@ class ApplyInnovation extends React.Component {
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (err) {} else {
         message.loading('提交成功，正在验证')
-        values.leaderClass = values.leaderClass.toString()
-        values.memberClass1 = values.memberClass1.toString()
-        values.memberClass2 = values.memberClass2.toString()
+        values.major = values.major.toString()
         console.log(values)
-        fetch('/api/apply/submit', {
+        fetch('/api/apply/submitInnovation', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
@@ -131,9 +129,9 @@ class ApplyInnovation extends React.Component {
         <FormItem
           label='性别'
           {...formItemLayout}
-          key="form-content-team-language"
+          key="form-content-sex"
         >
-          {getFieldDecorator('teamLanguage', {
+          {getFieldDecorator('sex', {
             rules: [{required: true, message: '请选择您的性别'}],
           })(
             <RadioGroup>
@@ -145,9 +143,9 @@ class ApplyInnovation extends React.Component {
         <FormItem
           label='专业'
           {...formItemLayout}
-          key="form-content-class"
+          key="form-content-major"
         >
-          {getFieldDecorator('class', {
+          {getFieldDecorator('major', {
             rules: [{
               required: true, message: '请选择专业'
             }]
@@ -158,7 +156,7 @@ class ApplyInnovation extends React.Component {
         <FormItem
           label='学号'
           {...formItemLayout}
-          key="form-content-leader-class-id"
+          key="form-content-class-id"
           hasFeedback
         >
           {getFieldDecorator('stuId', {
@@ -193,7 +191,7 @@ class ApplyInnovation extends React.Component {
           key="form-content-email"
           hasFeedback
         >
-          {getFieldDecorator('leaderMail', {
+          {getFieldDecorator('email', {
             rules: [{
               pattern: verify.mail, message: '输入的不是有效的邮箱！'
             }, {
@@ -203,7 +201,6 @@ class ApplyInnovation extends React.Component {
             <Input className='form-content-input' />,
           )}
         </FormItem>
-
 
         <FormItem
           key="form-content-footer"

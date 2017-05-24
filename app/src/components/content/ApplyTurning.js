@@ -44,7 +44,7 @@ class ApplyTuring extends React.Component {
         values.memberClass2 = values.memberClass2.toString()
         // let body = ParseValue(values)
         console.log(values)
-        fetch('/api/apply/submit', {
+        fetch('/api/apply/submitTurning', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
