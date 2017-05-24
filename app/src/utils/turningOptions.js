@@ -5,9 +5,6 @@ const options = [{
   value: '燕山大学',
   label: '燕山大学',
 },{
-  value: '东北石油大学秦皇岛分校',
-  label: '东北石油大学秦皇岛分校',
-},{
   value: '管理学院',
   label: '管理学院',
   children: [{

@@ -16,20 +16,14 @@ const FormItem = Form.Item
 const RadioGroup = Radio.Group
 
 @Form.create()
-class ApplyInnovation extends React.Component {
+class ApplySpecial extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
       loading: false,
-      value: 1,
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleReset = this.handleReset.bind(this)
-  }
-  onChange = (e) => {
-    this.setState({
-      value: e.target.value,
-    });
   }
 
   handleSubmit (e) {
@@ -39,8 +33,7 @@ class ApplyInnovation extends React.Component {
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (err) {} else {
         message.loading('提交成功，正在验证')
-        values.major = values.major.toString()
-        fetch('/api/apply/submitInnovation', {
+        fetch('/api/apply/submitSpecial', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
@@ -132,35 +125,6 @@ class ApplyInnovation extends React.Component {
           )}
         </FormItem>
         <FormItem
-          label='专业'
-          {...formItemLayout}
-          key="form-content-major"
-        >
-          {getFieldDecorator('major', {
-            rules: [{
-              required: true, message: '请选择专业'
-            }]
-          })(
-            <Cascader options={options} placeholder="请选择专业" className='form-content-input' />
-          )}
-        </FormItem>
-        <FormItem
-          label='学号'
-          {...formItemLayout}
-          key="form-content-class-id"
-          hasFeedback
-        >
-          {getFieldDecorator('stuId', {
-            rules: [{
-              pattern: verify.number, message: '请勿输入非数字字符！'
-            }, {
-              required: true, message: '请输入学号'
-            }]
-          })(
-            <Input className='form-content-input' />,
-          )}
-        </FormItem>
-        <FormItem
           label='手机号'
           {...formItemLayout}
           key="form-content-mobile"
@@ -223,4 +187,4 @@ class ApplyInnovation extends React.Component {
   }
 }
 
-export default ApplyInnovation
+export default ApplySpecial

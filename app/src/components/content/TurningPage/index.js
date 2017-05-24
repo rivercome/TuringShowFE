@@ -7,6 +7,8 @@ import enquire from 'enquire.js'
 // import Banner from './Banner'
 import ContentRight from './ContentRight'
 import ContentLeft from './ContentLeft'
+import ContentRight2 from './ContentRight-2'
+import ContentLeft2 from './ContentLeft-2'
 import SixPart from './SixPart'
 import ContentTable from '../SciencePage/ContentTable'
 import LogoCulture from './LogoCulture'
@@ -51,8 +53,12 @@ class HomePage extends Component {
         <LogoCulture id="logo-culture" key="logo-culture" isMode={this.state.isMode}/>
         <ThemSay id="them-say" key="them-say" isMode={this.state.isMode}/>
         <RuleAbout id="rule-about" key="rule-about" isMode={this.state.isMode}/>
+        <ContentRight2 id="content-left-2" key="content-left-2" isMode={this.state.isMode}/>
+        <ContentLeft2 id="content-left-1" key="content-left-1" isMode={this.state.isMode}/>
         <SixPart id="sex-part" key="sex-part" isMode={this.state.isMode}/>
         {/*<ContentTable id="content-table" key="content-table" isMode={this.state.isMode}/>*/}
+
+
         <LargeFooter id="footer" key="footer" isMode={this.state.isMode} />
       </div>
     )

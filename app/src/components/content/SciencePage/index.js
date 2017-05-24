@@ -7,7 +7,9 @@ import enquire from 'enquire.js'
 
 import LargeFooter from '../TurningPage/LargeFooter'
 import Banner from './Banner'
-
+import ContentLeft from './ContentLeft'
+import ContentRight from './ContentRight'
+import PersonAbout from './PersonAbout'
 class SciencePage extends Component {
   constructor (props) {
     super(props)
@@ -39,6 +41,9 @@ class SciencePage extends Component {
     return (
       <div>
         <Banner id="banner" key="banner" isMode={this.state.isMode}/>
+        <ContentRight id="content-right" key="content-right" isMode={this.state.isMode}/>
+        <ContentLeft id="content-left" key="content-left" isMode={this.state.isMode}/>
+        <PersonAbout id="person-about" key="person-about" isMode={this.state.isMode}/>
         <LargeFooter id="footer" key="footer" isMode={this.state.isMode} />
       </div>
     )

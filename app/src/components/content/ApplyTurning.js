@@ -21,9 +21,7 @@ class ApplyTuring extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      loading: false,
-      dayMoney: 0,
-      lunchMoney: 0
+      loading: false
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.checkTeamName = this.checkTeamName.bind(this)
@@ -41,9 +39,9 @@ class ApplyTuring extends React.Component {
         message.loading('提交成功，正在验证')
         values.leaderClass = values.leaderClass.toString()
         values.memberClass1 = values.memberClass1.toString()
-        values.memberClass2 = values.memberClass2.toString()
-        // let body = ParseValue(values)
-        console.log(values)
+        if (!!values.memberClass2) {
+          values.memberClass2 = values.memberClass2.toString()
+        }
         fetch('/api/apply/submitTurning', {
           method: 'POST',
           headers: {
@@ -282,10 +280,10 @@ class ApplyTuring extends React.Component {
             rules: [{
               pattern: verify.chinese, message: '输入包含非中文字符！'
             }, {
-              required: this.isNeccessary(), message: '请输入队员姓名'
+              required: false, message: '请输入队员姓名'
             }]
           })(
-            <Input className='form-content-input' />,
+            <Input className='form-content-input' placeholder="二人队伍请直接提交"/>,
           )}
         </FormItem>
         <FormItem

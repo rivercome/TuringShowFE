@@ -35,13 +35,12 @@ class ContentLeft extends React.Component {
             ease={['easeOutCubic', 'easeInCubic']}
             id={`${props.id}-textWrapper`}
           >
+
             <h1 key="h1" id={`${props.id}-title`}>
-              What is CCPC/ICPC?
+              专业黑客的网络技术干货！
             </h1>
             <p key="p" id={`${props.id}-content`}>
-              International Collegiate Programming Contest / China Collegiate Programming Contest
-              <br />
-              最顶级的程序设计竞赛舞台，最庞大的程序设计年度赛事，旨在激励当代大学生运用计算机编程技术和技能来解决实际问题，激发其学习算法和程序设计的兴趣，培养其团队合作意识、创新能力和挑战精神。
+              还在为“永恒之蓝”的入侵而忧心忡忡吗？遇到网络安全问题时还是一筹莫展吗？莫慌张！大讲堂第一期有请到我校优秀毕业生杨芸菲，解答你心中的网络安全困惑！带你走进网络安全的世界！
             </p>
           </QueueAnim>
           <TweenOne

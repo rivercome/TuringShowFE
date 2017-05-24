@@ -17,8 +17,8 @@ class SixPart extends React.Component {
     delete props.isMode;
     const oneAnim = { y: '+=30', opacity: 0, type: 'from', ease: 'easeOutQuad' };
     const blockArray = [
-      { icon: 'https://zos.alipayobjects.com/rmsportal/ScHBSdwpTkAHZkJ.png', title: '赛前宣讲', content: '假装有字假装有字假装有字假装有字假装有字假装有字假装有字假装有字。' },
-      { icon: 'https://zos.alipayobjects.com/rmsportal/MNdlBNhmDBLuzqp.png', title: '组队报名', content: '假装有字假装有字假装有字假装有字假装有字假装有字假装有字假装有字。' },
+      { icon: 'https://zos.alipayobjects.com/rmsportal/ScHBSdwpTkAHZkJ.png', title: '赛前宣讲', content: '【科技·新知】大讲堂压轴环节，图灵杯简单宣讲，简化枯燥无味的宣讲会，只给你最刺激有用的信息。' },
+      { icon: 'https://zos.alipayobjects.com/rmsportal/MNdlBNhmDBLuzqp.png', title: '组队报名', content: '自由组队，3人抱团，结对编程。全新报名系统，流程体验。参赛信息短信通知，避免纸质参赛证，节能减排。' },
       { icon: 'https://zos.alipayobjects.com/rmsportal/NKBELAOuuKbofDD.png', title: '赛题准备', content: '假装有字假装有字假装有字假装有字假装有字假装有字假装有字假装有字。' },
       { icon: 'https://zos.alipayobjects.com/rmsportal/ipwaQLBLflRfUrg.png', title: '比赛进行', content: '假装有字假装有字假装有字假装有字假装有字假装有字假装有字假装有字。' },
       { icon: 'https://zos.alipayobjects.com/rmsportal/xMSBjgxBhKfyMWX.png', title: '结果通知', content: '假装有字假装有字假装有字假装有字假装有字假装有字假装有字假装有字。' },

@@ -39,9 +39,13 @@ class Banner extends React.Component {
           >
             以新知之手，绘科技未来
           </p>
-          <Button type="ghost" key="button" id={`${props.id}-button`} onClick={()=>goto('/applyInnovation')}>
+          <Button ghost key="button" size='large' id={`${props.id}-button`} onClick={()=>goto('/applyInnovation')} style={{marginRight: 5}}>
             报名大讲堂
           </Button>
+          <Button type="danger" ghost size='large' key="button-friend" id={`${props.id}-button-friend`} onClick={()=>goto('/applySpecial')}>
+            校友报名通道
+          </Button>
+
         </QueueAnim>
         <TweenOne
           animation={{ y: '-=20', yoyo: true, repeat: -1, duration: 1000 }}

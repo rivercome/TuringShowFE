@@ -2,7 +2,7 @@ import React from 'react';
 import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-
+import {Link} from 'react-router'
 class ContentLeft extends React.Component {
 
   static defaultProps = {
@@ -36,12 +36,19 @@ class ContentLeft extends React.Component {
             id={`${props.id}-textWrapper`}
           >
             <h1 key="h1" id={`${props.id}-title`}>
-              What is CCPC/ICPC?
+              奖项设置 & <Link to="/applyInnovation">点我报名 </Link>
             </h1>
-            <p key="p" id={`${props.id}-content`}>
-              International Collegiate Programming Contest / China Collegiate Programming Contest
+            <p key="p" id={`${props.id}-content`} style={{lineHeight: 1.8}}>
               <br />
-              最顶级的程序设计竞赛舞台，最庞大的程序设计年度赛事，旨在激励当代大学生运用计算机编程技术和技能来解决实际问题，激发其学习算法和程序设计的兴趣，培养其团队合作意识、创新能力和挑战精神。
+              > 特等奖1队，专为 AK 队设置，无 AK 队不颁发
+              <br />
+              > 一等奖10队 二等奖15队 三等奖25队
+              <br />
+              > 首杀奖10队，颁发给每道题第一个提交正确的队伍
+              <br />
+              > 优秀新人奖3队，排名最高的前三个纯2016级队伍
+              <br />
+              > 优秀女生奖3队，排名最高的前三个女生队伍
             </p>
           </QueueAnim>
           <TweenOne
