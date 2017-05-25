@@ -53,7 +53,7 @@ class ApplyTuring extends React.Component {
           return res.json()
         }).then((json) => {
           if (json.success) {
-            goto('/success?turning')
+            goto('/success?turing')
           } else {
             message.error(json.message)
           }

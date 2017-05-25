@@ -65,10 +65,10 @@ class Content extends React.Component {
             component="p"
             key="p"
             reverseDelay={300}
-            id={`${props.id}-p`}
+            id={`${props.id}-title-second`}
+            style={{marginTop: 0}}
           >
             来自知乎用户的回答
-            <br />
           </TweenOne>
           <TweenOneGroup
             className={`${props.className}-img-wrapper`}

@@ -11,13 +11,13 @@ import TurningPage from './components/content/TurningPage'
 import SciencePage from './components/content/SciencePage'
 const history = process.env.NODE_ENV === 'development' ? hashHistory : browserHistory
 const hostPath = window.location.host.substr(0, 4)
-const root = hostPath === 'turn' ? TurningPage : SciencePage
+const root = hostPath === 'turi' ? TurningPage : SciencePage
 const RouterApp = (props) => (
   <Router history={history}>
     <Route path="/" component={AppComponent}>
       <IndexRoute component={root} />
-      <Route path="turning" component={TurningPage} />
-      <Route path="applyTurning" component={ApplyTurning} />
+      <Route path="turing" component={TurningPage} />
+      <Route path="applyTuring" component={ApplyTurning} />
       <Route path="applySpecial" component={ApplySpecial} />
       <Route path="applyInnovation" component={ApplyInnovation} />
       <Route path="download" component={Download} />

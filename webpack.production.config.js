@@ -12,7 +12,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, '/dist/build/'),
-    publicPath: 'http://ohtk9ocqw.bkt.clouddn.com/turning/',  // 表示 index.html 中引入资源的前缀path
+    publicPath: 'http://ohtk9ocqw.bkt.clouddn.com/turing/',  // 表示 index.html 中引入资源的前缀path
     filename: 'js/bundle.[chunkhash:8].js',
     chunkFilename: 'js/[name].[chunkhash:8].js'
   },

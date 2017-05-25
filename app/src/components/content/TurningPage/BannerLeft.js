@@ -65,7 +65,7 @@ class BannerLeft extends React.Component {
         <Button
           type="ghost"
           key="button"
-          onClick={()=>goto('/applyTurning')}
+          onClick={()=>goto('/applyTuring')}
           id={`${props.id}-buttonBlock0`}
         >
           直接报名

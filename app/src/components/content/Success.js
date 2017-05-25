@@ -9,7 +9,7 @@ const Success = (props) => {
   return (
     <div className="main-content">
       <div className="display1">您的信息已经登记成功！
-        {search==='?turning'?<Link to="/rule">点此了解比赛规则</Link>:<Link to="/innovation">点此回到首页</Link>}
+        {search==='?turing'?<Link to="/rule">点此了解比赛规则</Link>:<Link to="/innovation">点此回到首页</Link>}
       </div>
     </div>
   )

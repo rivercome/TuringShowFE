@@ -41,26 +41,26 @@ class AppComponent extends Component {
   }
 
   render () {
-    const {path = 'turning'} = this.props.routes[1]
+    const {path = 'turing'} = this.props.routes[1]
     const nav = () => {
-      if (path !== '/' && path !== 'turning' && path !== 'innovation') {
+      if (path !== '/' && path !== 'turing' && path !== 'innovation') {
         return <Nav id="nav" key="nav" isMode={this.state.isMode} path={[path]} />
       }
     }
     const footer = () =>{
-      if (path === 'applyTurning' || path === 'applyInnovation'||path === 'rule') {
+      if (path === 'applyTuring' || path === 'applyInnovation'||path === 'rule') {
         return <Footer id="footer" key="footer" isMode={this.state.isMode} />
       }
     }
     const hostPath = window.location.host.substr(0, 4)
     const meta = {
-      title: hostPath==='turn'?'第四届图灵杯':'科技·新知',
-      description: hostPath==='turn'?'第四届 ACM 图灵杯团队赛':'以新知之手，绘科技未来',
-      canonical: hostPath==='turn'?'http://turning.acmclub.cn':'http://newtech.acmclub.cn',
+      title: hostPath==='turi'?'第四届图灵杯':'科技·新知',
+      description: hostPath==='turi'?'第四届 ACM 图灵杯团队赛':'以新知之手，绘科技未来',
+      canonical: hostPath==='turi'?'http://turing.acmclub.cn':'http://newtech.acmclub.cn',
       meta: {
         charset: 'utf-8',
         name: {
-          keywords: 'turning,newtech'
+          keywords: 'turing,newtech'
         }
       }
     };
