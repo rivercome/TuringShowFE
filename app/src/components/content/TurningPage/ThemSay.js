@@ -58,6 +58,17 @@ class Content extends React.Component {
             id={`${props.id}-title`}
           >
             ACM 的意义
+
+          </TweenOne>
+          <TweenOne
+            animation={{ y: '+=30', opacity: 0, type: 'from', ease: 'easeOutQuad' }}
+            component="p"
+            key="p"
+            reverseDelay={300}
+            id={`${props.id}-p`}
+          >
+            来自知乎用户的回答
+            <br />
           </TweenOne>
           <TweenOneGroup
             className={`${props.className}-img-wrapper`}

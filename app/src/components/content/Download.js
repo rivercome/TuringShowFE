@@ -11,7 +11,7 @@ class Download extends Component {
     super(props)
     this.state = {
       password: '',
-      type: ''
+      type: 'turning'
     }
     this.onClick = this.onClick.bind(this)
     this.onChange = this.onChange.bind(this)
@@ -23,15 +23,15 @@ class Download extends Component {
     })
   }
 
-  onSelectChange = (e) => {
+  onSelectChange = (value) => {
     this.setState({
-      type: e.target.value,
+      type: value,
     })
   }
-
+p
   onClick () {
     const {password, type} = this.state
-    let url = '/api/apply/download?' + 'password=' + this.state.password + '&type=' + this.state.type
+    let url = '/api/apply/download?' + 'password=' + password + '&type=' + type
     let a = document.createElement('a')
     a.href = url
     a.target = '_blank'

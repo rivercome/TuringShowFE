@@ -21,6 +21,7 @@
     "rc-scroll-anim": "^1.0.4",
     "rc-tween-one": "^1.2.5",
     "react": "^15.3.2",
+    "react-document-title": "^2.0.3",
     "react-dom": "^15.3.2",
     "react-redux": "^5.0.3",
     "react-router": "^2.4.0",

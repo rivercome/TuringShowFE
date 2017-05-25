@@ -2,6 +2,8 @@ import React from 'react';
 import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
+import contentRight2 from '../../../static/images/content-right-2.png'
+
 class ContentRight extends React.Component {
   static defaultProps = {
     className: 'content-right',
@@ -33,7 +35,7 @@ class ContentRight extends React.Component {
             resetStyleBool
           >
             <span id={`${props.id}-img`}>
-              <img width="100%" src="https://zos.alipayobjects.com/rmsportal/nLzbeGQLPyBJoli.png" />
+              <img width="100%" src={contentRight2} />
             </span>
           </TweenOne>
           <QueueAnim

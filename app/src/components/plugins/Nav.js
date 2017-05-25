@@ -3,6 +3,7 @@ import TweenOne from 'rc-tween-one'
 import { Menu } from 'antd'
 import goto from '../../utils/goto'
 import logo from '../../static/images/acm_logo_long.png'
+import {Link} from 'react-router'
 const Item = Menu.Item
 class Header extends React.Component {
   constructor (props) {
@@ -39,7 +40,7 @@ class Header extends React.Component {
           animation={{x: -30, type: 'from', ease: 'easeOutQuad'}}
           id={`${this.props.id}-logo`}
         >
-          <a href="#"><img width="100%" src={logo} /></a>
+          <Link to="/"><img width="100%" src={logo} /></Link>
         </TweenOne>
         {isMode ? (<div
           className={`${this.props.className}-phone-nav${this.state.phoneOpen ? ' open' : ''}`}

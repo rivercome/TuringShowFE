@@ -2,7 +2,6 @@ import React from 'react';
 import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-
 class ContentRight extends React.Component {
   static defaultProps = {
     className: 'content-right',

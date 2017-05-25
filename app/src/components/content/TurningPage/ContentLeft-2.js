@@ -3,6 +3,8 @@ import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import {Link} from 'react-router'
+import contentLeft2 from '../../../static/images/content-left-2.png'
+
 class ContentLeft extends React.Component {
 
   static defaultProps = {
@@ -59,7 +61,7 @@ class ContentLeft extends React.Component {
             resetStyleBool
           >
             <span id={`${props.id}-img`}>
-              <img width="100%" src="https://zos.alipayobjects.com/rmsportal/tvQTfCupGUFKSfQ.png" />
+              <img width="100%" src={contentLeft2} />
             </span>
           </TweenOne>
         </OverPack>
