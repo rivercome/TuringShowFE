@@ -48,7 +48,7 @@ class AppComponent extends Component {
       }
     }
     const footer = () =>{
-      if (path === 'applyTuring' || path === 'applyInnovation'||path === 'rule') {
+      if (path === 'applyTuring'||path === 'rule') {
         return <Footer id="footer" key="footer" isMode={this.state.isMode} />
       }
     }
