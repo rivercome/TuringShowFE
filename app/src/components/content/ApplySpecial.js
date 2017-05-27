@@ -110,6 +110,7 @@ class ApplySpecial extends React.Component {
             <Input className='form-content-input' />,
           )}
         </FormItem>
+
         <FormItem
           label='性别'
           {...formItemLayout}
@@ -122,6 +123,20 @@ class ApplySpecial extends React.Component {
               <Radio value='男'>男</Radio>
               <Radio value='女'>女</Radio>
             </RadioGroup>
+          )}
+        </FormItem>
+        <FormItem
+          label='单位'
+          {...formItemLayout}
+          key="form-content-unit"
+          hasFeedback
+        >
+          {getFieldDecorator('unit', {
+            rules: [{
+              required: false, message: '请输入单位'
+            }]
+          })(
+            <Input className='form-content-input' />,
           )}
         </FormItem>
         <FormItem
@@ -167,6 +182,7 @@ class ApplySpecial extends React.Component {
                 htmlType='submit'
                 className='form-button-1'
                 loading={this.state.loading}
+                disabled
               >
                 点击提交
               </Button>
