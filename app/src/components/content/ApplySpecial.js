@@ -23,7 +23,6 @@ class ApplySpecial extends React.Component {
       loading: false,
     }
     this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleReset = this.handleReset.bind(this)
   }
 
   handleSubmit (e) {
@@ -45,6 +44,7 @@ class ApplySpecial extends React.Component {
         }).then((json) => {
           if (json.success) {
             goto('/success?innovation')
+            message.success('提交成功!')
           } else {
             message.error(json.message)
           }
@@ -58,10 +58,7 @@ class ApplySpecial extends React.Component {
     }, 1000)
   }
 
-  handleReset (e) {
-    e.preventDefault()
-    this.props.form.resetFields()
-  }
+
 
   render () {
     const {getFieldDecorator} = this.props.form
@@ -182,17 +179,9 @@ class ApplySpecial extends React.Component {
                 htmlType='submit'
                 className='form-button-1'
                 loading={this.state.loading}
-                disabled
+                // disabled
               >
                 点击提交
-              </Button>
-              <Button
-                type="ghost"
-                onClick={this.handleReset}
-                className='form-button-2'
-                style={{marginLeft: 20}}
-              >
-                重置
               </Button>
 
             </Col>

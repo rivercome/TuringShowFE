@@ -40,7 +40,7 @@ class Banner extends React.Component {
             以新知之手，绘科技未来
           </p>
           <Button ghost key="button" size='large' id={`${props.id}-button`} onClick={()=>goto('/applyInnovation')} style={{marginRight: 5}}>
-            报名大讲堂
+            本校报名通道
           </Button>
           <Button type="danger" ghost size='large' key="button-friend" id={`${props.id}-button-friend`} onClick={()=>goto('/applySpecial')}>
             校友报名通道

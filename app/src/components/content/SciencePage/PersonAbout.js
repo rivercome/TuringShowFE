@@ -60,7 +60,7 @@ class PersonAbout extends React.Component {
               key="p"
               id={`${props.id}-content`}
             >
-              UnicornTeam 无线安全研究员
+              UnicornTeam 无线安全研究员，他将与我们分享他在“一带一路”国际峰会的网络安保期间所亲历的WannaCry勒索病毒应急处置过程以及他们团队在物联网安全领域的新案例。
             </p>
             <QueueAnim
               component="ul"

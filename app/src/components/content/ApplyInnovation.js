@@ -25,7 +25,6 @@ class ApplyInnovation extends React.Component {
       value: 1,
     }
     this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleReset = this.handleReset.bind(this)
   }
 
   onChange = (e) => {
@@ -53,8 +52,10 @@ class ApplyInnovation extends React.Component {
           return res.json()
         }).then((json) => {
           if (json.success) {
-            const {applyId} = json.data
+            let {applyId} = json.data
+            applyId = applyId + 52
             goto('/success?innovation='+ applyId)
+            message.success('提交成功!')
           } else {
             message.error(json.message)
           }
@@ -68,10 +69,7 @@ class ApplyInnovation extends React.Component {
     }, 1000)
   }
 
-  handleReset (e) {
-    e.preventDefault()
-    this.props.form.resetFields()
-  }
+
 
   render () {
     const {getFieldDecorator} = this.props.form
@@ -151,7 +149,7 @@ class ApplyInnovation extends React.Component {
           )}
         </FormItem>
         <FormItem
-          label='您是否听说过比特币病毒？'
+          label='您是否听说过比特币勒索病毒？'
           {...formItemLayout}
           key="apply-innovation-know-bit-coin"
           colon={false}
@@ -267,21 +265,14 @@ class ApplyInnovation extends React.Component {
             loading={this.state.loading}
             // disabled
           >
-            点击提交
+            点击报名
           </Button>
-          <Button
-            type="ghost"
-            onClick={this.handleReset}
-            className='form-button-2'
-            style={{marginLeft: 20}}
-          >
-            重置
-          </Button>
+
         </FormItem>
 
         <div className="apply-innovation-footer-title" key="apply-innovation-footer">
           <div className="apply-innovation-footer-line"/>
-          <div className="apply-innovation-footer-text">以科技之手 会科技未来</div>
+          <div className="apply-innovation-footer-text">以科技之手 绘科技未来</div>
           <div className="apply-innovation-footer-line"/>
         </div>
       </QueueAnim>
