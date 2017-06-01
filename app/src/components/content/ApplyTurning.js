@@ -325,8 +325,10 @@ class ApplyTuring extends React.Component {
                 htmlType='submit'
                 className='form-button-1'
                 loading={this.state.loading}
+                disabled
               >
-                点击提交
+                {/*点击提交*/}
+                报名尚未开始，6/2/20:00 等你来战
               </Button>
               <Button
                 type="ghost"
