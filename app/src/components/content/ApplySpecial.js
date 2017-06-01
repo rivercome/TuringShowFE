@@ -152,22 +152,6 @@ class ApplySpecial extends React.Component {
             <Input className='form-content-input' />,
           )}
         </FormItem>
-        <FormItem
-          label='邮箱'
-          {...formItemLayout}
-          key="form-content-email"
-          hasFeedback
-        >
-          {getFieldDecorator('email', {
-            rules: [{
-              pattern: verify.mail, message: '输入的不是有效的邮箱！'
-            }, {
-              required: true, message: '请输入您的邮箱'
-            }]
-          })(
-            <Input className='form-content-input' />,
-          )}
-        </FormItem>
 
         <FormItem
           key="form-content-footer"

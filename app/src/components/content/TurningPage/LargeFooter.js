@@ -42,7 +42,7 @@ class LargeFooter extends React.Component {
     const logoContent = { img: acmLongLogo, content: 'ACM 俱乐部\n代码改变世界',contentLink: 'http://www.acmclub.cn\n'  };
     const logoContent2 = { img: scienceLogo, content: 'ACM 俱乐部\n代码改变世界',contentLink: 'http://www.acmclub.cn\n'  };
     const dataInnovation = [
-      { title: '主办单位', content: '计算机与通信工程学院\n共青团东北大学秦皇岛分校委员会\n大学生创新创业中心\n校友工作办公室', contentLink: 'http://jsjytx.neuq.edu.cn\nhttp://www.neuq.edu.cn\nhttp://cxcyzx.neuq.edu.cn\nhttp://www.neuq.edu.cn' },
+      { title: '主办单位', content: '计算机与通信工程学院\n大学生创新创业中心\n共青团东北大学秦皇岛分校委员会\n校友工作办公室', contentLink: 'http://jsjytx.neuq.edu.cn\nhttp://cxcyzx.neuq.edu.cn\nhttp://www.neuq.edu.cn\nhttp://www.neuq.edu.cn' },
       { title: '协办单位', content: '计算机与通信工程学院团委学生会\n计算机与通信工程学院科技创新部\nACM俱乐部\n东北大学秦皇岛分校学生会', contentLink: 'http://jsjytx.neuq.edu.cn\nhttp://jsjytx.neuq.edu.cn\nwww.acmclub.cn\nhttp://www.neuq.edu.cn' },
       // { title: '承办单位', content: '东北大学秦皇岛分校ACM俱乐部\n东北大学秦皇岛分校计算机与通信工程学院团委学生会\n东北大学秦皇岛分校计算机与通信工程学院科技创新部\n', contentLink: 'http://www.acmclub.cn\nhttp://jsjytx.neuq.edu.cn\nhttp://jsjytx.neuq.edu.cn/\n' },
       // { title: '合作单位', content: 'https://zos.alipayobjects.com/rmsportal/IiCDSwhqYwQHLeU.svg\n https://zos.alipayobjects.com/rmsportal/AXtqVjTullNabao.svg\n https://zos.alipayobjects.com/rmsportal/fhJykUTtceAhYFz.svg\n https://zos.alipayobjects.com/rmsportal/IDZTVybHbaKmoEA.svg', contentLink: '#\n#\n#\n#' },

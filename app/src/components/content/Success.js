@@ -4,6 +4,8 @@
 import React from 'react'
 import { Link } from 'react-router'
 import '../../static/css/success.css'
+import qq from '../../static/images/qq.png'
+
 const Success = (props) => {
   const {location: {search = '', query}} = props
   if (!!query) {
@@ -33,6 +35,11 @@ const Success = (props) => {
       希望您能帮助我们将此活动带向您的朋友们，让更多人了解新科技，让我们了解互联网安全！
       <br />
       <span style={{fontSize: 26}}>点击右上角分享</span>
+      <br />
+      <br />
+      <div>
+        <img src={qq} width={120} />
+      </div>
     </div>
   )
   return (
