@@ -21,7 +21,7 @@ const Success = (props) => {
       <div className="success-info">
         活动时间： 2017/06/02 19:30
         <br />
-        活动地点： 大学会馆三楼学术报告厅
+        活动地点： 科技楼9024
       </div>
       {+query.innovation > 1 && <div>
         <br />
