@@ -51,7 +51,8 @@ p
           />
         </div>
         <Select defaultValue="turning" style={{ width: 120 }} onChange={this.onSelectChange}>
-          <Option value={'turning'}>图灵杯</Option>
+          <Option value={'turning'}>图灵杯现场赛</Option>
+          <Option value={'turingOnline'}>图灵杯网络赛</Option>
           <Option value={'innovation'}>科技新知</Option>
           <Option value={'special'}>科技新知校友</Option>
         </Select>

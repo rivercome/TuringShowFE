@@ -37,7 +37,7 @@ class ApplyTuringOnline extends React.Component {
       if (err) {} else {
         message.loading('提交成功，正在验证')
 
-        fetch('http://localhost:3000/api/apply/submitTurningOnline', {
+        fetch('/api/apply/submitTurningOnline', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
