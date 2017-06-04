@@ -66,7 +66,7 @@ class SixPart extends React.Component {
             id={`${props.id}-title`}
             reverseDelay={100}
           >
-            ACMClub 联合 计算机与通信工程学院
+            计算机与通信工程学院
           </TweenOne>
           <TweenOne
             key="p"

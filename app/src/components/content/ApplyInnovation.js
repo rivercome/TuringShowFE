@@ -103,160 +103,169 @@ class ApplyInnovation extends React.Component {
         <div className="apply-innovation-intro"  key="form-content-intro">
           感谢您填写次表单，本表单用于对报名人员进行信息统计，您的输入将影响后续的抢票、抽奖、内推等活动，请认真填写，大约需花费 1 分钟。
         </div>
-        <FormItem
-          label='您是否听说过，连接陌生 WIFI，可能会造成财产损失？'
-          {...formItemLayout}
-          key="apply-innovation-know-loss"
-          colon={false}
-        >
-          {getFieldDecorator('knowLoss', {
-            rules: [{required: true, message: '请选择'}],
-          })(
-            <RadioGroup>
-              <Radio value='知道'>知道</Radio>
-              <Radio value='不知道'>不知道</Radio>
-            </RadioGroup>
-          )}
-        </FormItem>
-        <FormItem
-          label='您是否相信，黑客能够莫名其妙的连接你的手机、电脑？'
-          {...formItemLayout}
-          key="apply-innovation-know-connect"
-          colon={false}
-        >
-          {getFieldDecorator('knowConnect', {
-            rules: [{required: true, message: '请选择'}],
-          })(
-            <RadioGroup>
-              <Radio value='相信'>相信</Radio>
-              <Radio value='不相信'>不相信</Radio>
-            </RadioGroup>
-          )}
-        </FormItem>
-        <FormItem
-          label='您是否知道上述问题的实现原理？'
-          {...formItemLayout}
-          key="apply-innovation-know-theory"
-          colon={false}
-        >
-          {getFieldDecorator('knowTheory', {
-            rules: [{required: true, message: '请选择'}],
-          })(
-            <RadioGroup>
-              <Radio value='知道'>知道</Radio>
-              <Radio value='不知道'>不知道</Radio>
-            </RadioGroup>
-          )}
-        </FormItem>
-        <FormItem
-          label='您是否听说过比特币勒索病毒？'
-          {...formItemLayout}
-          key="apply-innovation-know-bit-coin"
-          colon={false}
-        >
-          {getFieldDecorator('knowBitCoin', {
-            rules: [{required: true, message: '请选择'}],
-          })(
-            <RadioGroup>
-              <Radio value='知道'>知道</Radio>
-              <Radio value='不知道'>不知道</Radio>
-            </RadioGroup>
-          )}
-        </FormItem>
-        <FormItem
-          label='姓名'
-          {...formItemLayout}
-          key="form-content-name"
-          hasFeedback
-        >
-          {getFieldDecorator('name', {
-            rules: [{
-              pattern: verify.chinese, message: '输入包含非中文字符！'
-            }, {
-              required: true, message: '请输入姓名'
-            }]
-          })(
-            <Input className='form-content-input' />,
-          )}
-        </FormItem>
-        <FormItem
-          label='性别'
-          {...formItemLayout}
-          key="form-content-sex"
-        >
-          {getFieldDecorator('sex', {
-            rules: [{required: true, message: '请选择您的性别'}],
-          })(
-            <RadioGroup>
-              <Radio value='男'>男</Radio>
-              <Radio value='女'>女</Radio>
-            </RadioGroup>
-          )}
-        </FormItem>
-        <FormItem
-          label='专业'
-          {...formItemLayout}
-          key="form-content-major"
-        >
-          {getFieldDecorator('major', {
-            rules: [{
-              required: true, message: '请选择专业'
-            }]
-          })(
-            <Cascader options={options} placeholder="请选择专业" className='form-content-input' />
-          )}
-        </FormItem>
-        <FormItem
-          label='学号'
-          {...formItemLayout}
-          key="form-content-class-id"
-          hasFeedback
-        >
-          {getFieldDecorator('stuId', {
-            rules: [{
-              pattern: verify.number, message: '请勿输入非数字字符！'
-            }, {
-              required: true, message: '请输入学号'
-            }]
-          })(
-            <Input className='form-content-input' />,
-          )}
-        </FormItem>
-        <FormItem
-          label='手机号'
-          {...formItemLayout}
-          key="form-content-mobile"
-          hasFeedback
-        >
-          {getFieldDecorator('mobile', {
-            rules: [{
-              pattern: verify.mobile, message: '输入的不是有效的手机号码！'
-            }, {
-              required: true, message: '请输入手机号码'
-            }]
-          })(
-            <Input className='form-content-input' />,
-          )}
-        </FormItem>
+        <div className="display0">
+          <br />
+          报名已经结束，活动信息如下：
+          <br />
+          时间： 2017年06月02日 19:00:00
+          <br />
 
-        <FormItem
-          key="form-content-footer"
-        >
-          <Button
-            type='primary'
-            htmlType='submit'
-            className='form-button-1'
-            loading={this.state.loading}
-            // disabled
-          >
-            点击报名
-          </Button>
+          地点： 科技楼 9024
+        </div>
+        {/*<FormItem*/}
+          {/*label='您是否听说过，连接陌生 WIFI，可能会造成财产损失？'*/}
+          {/*{...formItemLayout}*/}
+          {/*key="apply-innovation-know-loss"*/}
+          {/*colon={false}*/}
+        {/*>*/}
+          {/*{getFieldDecorator('knowLoss', {*/}
+            {/*rules: [{required: true, message: '请选择'}],*/}
+          {/*})(*/}
+            {/*<RadioGroup>*/}
+              {/*<Radio value='知道'>知道</Radio>*/}
+              {/*<Radio value='不知道'>不知道</Radio>*/}
+            {/*</RadioGroup>*/}
+          {/*)}*/}
+        {/*</FormItem>*/}
+        {/*<FormItem*/}
+          {/*label='您是否相信，黑客能够莫名其妙的连接你的手机、电脑？'*/}
+          {/*{...formItemLayout}*/}
+          {/*key="apply-innovation-know-connect"*/}
+          {/*colon={false}*/}
+        {/*>*/}
+          {/*{getFieldDecorator('knowConnect', {*/}
+            {/*rules: [{required: true, message: '请选择'}],*/}
+          {/*})(*/}
+            {/*<RadioGroup>*/}
+              {/*<Radio value='相信'>相信</Radio>*/}
+              {/*<Radio value='不相信'>不相信</Radio>*/}
+            {/*</RadioGroup>*/}
+          {/*)}*/}
+        {/*</FormItem>*/}
+        {/*<FormItem*/}
+          {/*label='您是否知道上述问题的实现原理？'*/}
+          {/*{...formItemLayout}*/}
+          {/*key="apply-innovation-know-theory"*/}
+          {/*colon={false}*/}
+        {/*>*/}
+          {/*{getFieldDecorator('knowTheory', {*/}
+            {/*rules: [{required: true, message: '请选择'}],*/}
+          {/*})(*/}
+            {/*<RadioGroup>*/}
+              {/*<Radio value='知道'>知道</Radio>*/}
+              {/*<Radio value='不知道'>不知道</Radio>*/}
+            {/*</RadioGroup>*/}
+          {/*)}*/}
+        {/*</FormItem>*/}
+        {/*<FormItem*/}
+          {/*label='您是否听说过比特币勒索病毒？'*/}
+          {/*{...formItemLayout}*/}
+          {/*key="apply-innovation-know-bit-coin"*/}
+          {/*colon={false}*/}
+        {/*>*/}
+          {/*{getFieldDecorator('knowBitCoin', {*/}
+            {/*rules: [{required: true, message: '请选择'}],*/}
+          {/*})(*/}
+            {/*<RadioGroup>*/}
+              {/*<Radio value='知道'>知道</Radio>*/}
+              {/*<Radio value='不知道'>不知道</Radio>*/}
+            {/*</RadioGroup>*/}
+          {/*)}*/}
+        {/*</FormItem>*/}
+        {/*<FormItem*/}
+          {/*label='姓名'*/}
+          {/*{...formItemLayout}*/}
+          {/*key="form-content-name"*/}
+          {/*hasFeedback*/}
+        {/*>*/}
+          {/*{getFieldDecorator('name', {*/}
+            {/*rules: [{*/}
+              {/*pattern: verify.chinese, message: '输入包含非中文字符！'*/}
+            {/*}, {*/}
+              {/*required: true, message: '请输入姓名'*/}
+            {/*}]*/}
+          {/*})(*/}
+            {/*<Input className='form-content-input' />,*/}
+          {/*)}*/}
+        {/*</FormItem>*/}
+        {/*<FormItem*/}
+          {/*label='性别'*/}
+          {/*{...formItemLayout}*/}
+          {/*key="form-content-sex"*/}
+        {/*>*/}
+          {/*{getFieldDecorator('sex', {*/}
+            {/*rules: [{required: true, message: '请选择您的性别'}],*/}
+          {/*})(*/}
+            {/*<RadioGroup>*/}
+              {/*<Radio value='男'>男</Radio>*/}
+              {/*<Radio value='女'>女</Radio>*/}
+            {/*</RadioGroup>*/}
+          {/*)}*/}
+        {/*</FormItem>*/}
+        {/*<FormItem*/}
+          {/*label='专业'*/}
+          {/*{...formItemLayout}*/}
+          {/*key="form-content-major"*/}
+        {/*>*/}
+          {/*{getFieldDecorator('major', {*/}
+            {/*rules: [{*/}
+              {/*required: true, message: '请选择专业'*/}
+            {/*}]*/}
+          {/*})(*/}
+            {/*<Cascader options={options} placeholder="请选择专业" className='form-content-input' />*/}
+          {/*)}*/}
+        {/*</FormItem>*/}
+        {/*<FormItem*/}
+          {/*label='学号'*/}
+          {/*{...formItemLayout}*/}
+          {/*key="form-content-class-id"*/}
+          {/*hasFeedback*/}
+        {/*>*/}
+          {/*{getFieldDecorator('stuId', {*/}
+            {/*rules: [{*/}
+              {/*pattern: verify.number, message: '请勿输入非数字字符！'*/}
+            {/*}, {*/}
+              {/*required: true, message: '请输入学号'*/}
+            {/*}]*/}
+          {/*})(*/}
+            {/*<Input className='form-content-input' />,*/}
+          {/*)}*/}
+        {/*</FormItem>*/}
+        {/*<FormItem*/}
+          {/*label='手机号'*/}
+          {/*{...formItemLayout}*/}
+          {/*key="form-content-mobile"*/}
+          {/*hasFeedback*/}
+        {/*>*/}
+          {/*{getFieldDecorator('mobile', {*/}
+            {/*rules: [{*/}
+              {/*pattern: verify.mobile, message: '输入的不是有效的手机号码！'*/}
+            {/*}, {*/}
+              {/*required: true, message: '请输入手机号码'*/}
+            {/*}]*/}
+          {/*})(*/}
+            {/*<Input className='form-content-input' />,*/}
+          {/*)}*/}
+        {/*</FormItem>*/}
 
-        </FormItem>
+        {/*<FormItem*/}
+          {/*key="form-content-footer"*/}
+        {/*>*/}
+          {/*<Button*/}
+            {/*type='primary'*/}
+            {/*htmlType='submit'*/}
+            {/*className='form-button-1'*/}
+            {/*loading={this.state.loading}*/}
+            {/*// disabled*/}
+          {/*>*/}
+            {/*点击报名*/}
+          {/*</Button>*/}
+
+        {/*</FormItem>*/}
 
         <div className="apply-innovation-footer-title" key="apply-innovation-footer">
           <div className="apply-innovation-footer-line"/>
-          <div className="apply-innovation-footer-text">以科技之手 绘科技未来</div>
+          <div className="apply-innovation-footer-text">以科技之手 绘新知未来</div>
           <div className="apply-innovation-footer-line"/>
         </div>
       </QueueAnim>

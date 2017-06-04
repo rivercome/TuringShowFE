@@ -9,7 +9,6 @@ import {Link } from 'react-router'
 import 'whatwg-fetch'
 import 'es6-promise'
 import verify from '../../utils/Verify'
-import options from '../../utils/turningOptions'
 import goto from '../../utils/goto'
 
 import '../../static/css/applyTurning.css'
@@ -17,7 +16,7 @@ const FormItem = Form.Item
 const RadioGroup = Radio.Group
 
 @Form.create()
-class ApplyTuring extends React.Component {
+class ApplyTuringOnline extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -26,6 +25,7 @@ class ApplyTuring extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
     this.checkTeamName = this.checkTeamName.bind(this)
     this.handleReset = this.handleReset.bind(this)
+
     this.isNeccessary=this.isNeccessary.bind(this)
   }
 
@@ -36,12 +36,8 @@ class ApplyTuring extends React.Component {
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (err) {} else {
         message.loading('提交成功，正在验证')
-        values.leaderClass = values.leaderClass.toString()
-        values.memberClass1 = values.memberClass1.toString()
-        if (!!values.memberClass2) {
-          values.memberClass2 = values.memberClass2.toString()
-        }
-        fetch('/api/apply/submitTurning', {
+
+        fetch('http://localhost:3000/api/apply/submitTurningOnline', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
@@ -109,11 +105,11 @@ class ApplyTuring extends React.Component {
           <div className="form-content-header-title">
             第四届 NEUQ-ACM 图灵杯程序设计大赛（团队赛）
             <br />
-            暨 2017 中国大学生程序设计大赛校内选拔赛
+            网络赛报名
           </div>
           <br />
           <div className="form-content-header-extra">
-            <Link to="/applyTuringOnline">网络赛报名</Link>
+            <Link to="/applyTuring">现场赛报名</Link>
             <Link to="/rule">点此查看比赛规则</Link>
           </div>
         </div>
@@ -150,32 +146,16 @@ class ApplyTuring extends React.Component {
           )}
         </FormItem>
         <FormItem
-          label='队长专业'
+          label='队长学校'
           {...formItemLayout}
-          key="form-content-leader-class"
+          key="form-content-leader-school"
         >
-          {getFieldDecorator('leaderClass', {
+          {getFieldDecorator('leaderSchool', {
             rules: [{
-              required: true, message: '请选择队长专业'
+              required: true, message: '输入队长学校'
             }]
           })(
-            <Cascader options={options} placeholder="请选择队长专业" className='form-content-input' />
-          )}
-        </FormItem>
-        <FormItem
-          label='队长学号'
-          {...formItemLayout}
-          key="form-content-leader-class-id"
-          hasFeedback
-        >
-          {getFieldDecorator('leaderStuId', {
-            rules: [{
-              pattern: verify.number, message: '请勿输入非数字字符！'
-            }, {
-              required: true, message: '请输入队长学号'
-            }]
-          })(
-            <Input className='form-content-input' />,
+            <Input className='form-content-input' />
           )}
         </FormItem>
         <FormItem
@@ -241,32 +221,16 @@ class ApplyTuring extends React.Component {
           )}
         </FormItem>
         <FormItem
-          label='队员1专业'
+          label='队员1学校'
           {...formItemLayout}
-          key="form-content-member-class-1"
+          key="form-content-member-school-1"
         >
-          {getFieldDecorator('memberClass1', {
+          {getFieldDecorator('memberSchool1', {
             rules: [{
-              required: true, message: '请选择队员专业'
+              required: true, message: '请输入队员1学校'
             }]
           })(
-            <Cascader options={options} placeholder="请选择队员专业" className='form-content-input' />
-          )}
-        </FormItem>
-        <FormItem
-          label='队员1学号'
-          {...formItemLayout}
-          key="form-content-member-class-id-1"
-          hasFeedback
-        >
-          {getFieldDecorator('memberStuId1', {
-            rules: [{
-              pattern: verify.number, message: '请勿输入非数字字符！'
-            }, {
-              required: true, message: '请输入队员学号'
-            }]
-          })(
-            <Input className='form-content-input' />,
+            <Input className='form-content-input' />
           )}
         </FormItem>
         <FormItem
@@ -286,32 +250,16 @@ class ApplyTuring extends React.Component {
           )}
         </FormItem>
         <FormItem
-          label='队员2专业'
+          label='队员2学校'
           {...formItemLayout}
-          key="form-content-member-class-2"
+          key="form-content-member-school-2"
         >
-          {getFieldDecorator('memberClass2', {
+          {getFieldDecorator('memberSchool2', {
             rules: [{
-              required: this.isNeccessary(), message: '请选择队员专业'
+              required: this.isNeccessary(), message: '请输入队员2学校'
             }]
           })(
-            <Cascader options={options} placeholder="请选择队员专业" className='form-content-input' />
-          )}
-        </FormItem>
-        <FormItem
-          label='队员2学号'
-          {...formItemLayout}
-          key="form-content-member-class-id-2"
-          hasFeedback
-        >
-          {getFieldDecorator('memberStuId2', {
-            rules: [{
-              pattern: verify.number, message: '请勿输入非数字字符！'
-            }, {
-              required: this.isNeccessary(), message: '请输入队员学号'
-            }]
-          })(
-            <Input className='form-content-input' />,
+            <Input className='form-content-input' />
           )}
         </FormItem>
         <FormItem
@@ -344,4 +292,4 @@ class ApplyTuring extends React.Component {
   }
 }
 
-export default ApplyTuring
+export default ApplyTuringOnline

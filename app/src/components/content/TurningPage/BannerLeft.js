@@ -54,7 +54,7 @@ class BannerLeft extends React.Component {
             key="logo"
             id={`${props.id}-titleBlock0`}
           >
-            ACM 图灵杯
+             图灵杯团队赛
           </span>
         <p
           key="content"
@@ -65,10 +65,15 @@ class BannerLeft extends React.Component {
         <Button
           type="ghost"
           key="button"
+          size="large"
+          style={{marginRight:20}}
           onClick={()=>goto('/applyTuring')}
           id={`${props.id}-buttonBlock0`}
         >
-          直接报名
+          现场赛报名
+        </Button>
+        <Button type="danger" ghost size='large' key="button-online" id={`${props.id}-button-online`} onClick={()=>goto('/applyTuringOnline')}>
+          网络赛报名
         </Button>
       </QueueAnim>
     </Element>);

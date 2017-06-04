@@ -3,6 +3,7 @@ import { browserHistory, hashHistory, IndexRoute, Route, Router } from 'react-ro
 import AppComponent from './components/app'
 import ApplyTurning from './components/content/ApplyTurning'
 import ApplyInnovation from './components/content/ApplyInnovation'
+import applyTuringOnline from './components/content/ApplyTuringOnline'
 import ApplySpecial from './components/content/ApplySpecial'
 import Download from './components/content/Download'
 import Success from './components/content/Success'
@@ -19,6 +20,7 @@ const RouterApp = (props) => (
       <Route path="turing" component={TurningPage} />
       <Route path="applyTuring" component={ApplyTurning} />
       <Route path="applySpecial" component={ApplySpecial} />
+      <Route path="applyTuringOnline" component={applyTuringOnline} />
       <Route path="applyInnovation" component={ApplyInnovation} />
       <Route path="download" component={Download} />
       <Route path="rule" component={Rule} />
