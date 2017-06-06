@@ -5,6 +5,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import '../../static/css/success.css'
 import qq from '../../static/images/qq.png'
+import turing from '../../static/images/turing2017.png'
 
 const Success = (props) => {
   const {location: {search = '', query}} = props
@@ -44,7 +45,12 @@ const Success = (props) => {
   )
   return (
     <div className="main-content">
-      {search === '?turing' ? <div className="display1">您的信息已经登记成功！<Link to="/rule">点此了解比赛规则</Link></div> : content}
+      {search === '?turing' ? <div className="display1">您的信息已经登记成功！<Link to="/rule">点此了解比赛规则</Link><br />
+        <br />
+        <div>
+          <img src={turing} width={300} />
+        </div>
+      </div> : content}
 
     </div>
   )
