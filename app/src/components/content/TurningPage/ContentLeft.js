@@ -39,7 +39,7 @@ class ContentLeft extends React.Component {
               What is CCPC/ICPC?
             </h1>
             <p key="p" id={`${props.id}-content`}>
-              International Collegiate Programming Contest / China Collegiate Programming Contest
+              China Collegiate Programming Contest / International Collegiate Programming Contest
               <br />
               最顶级的程序设计竞赛舞台，最庞大的程序设计年度赛事，旨在激励当代大学生运用计算机编程技术和技能来解决实际问题，激发其学习算法和程序设计的兴趣，培养其团队合作意识、创新能力和挑战精神。
             </p>

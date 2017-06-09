@@ -38,9 +38,10 @@ class ContentLeft extends React.Component {
             id={`${props.id}-textWrapper`}
           >
             <h1 key="h1" id={`${props.id}-title`}>
-              现场赛奖项设置 & <Link to="/applyInnovation">点我报名 </Link>
+              奖项设置 & <Link to="/applyTuring">点我报名 </Link>
             </h1>
-            <p key="p" id={`${props.id}-content`} style={{lineHeight: 1.8}}>
+            <p key="p" id={`${props.id}-content`} style={{lineHeight: 1.8,textAlign: 'left'}}>
+              * 以下奖项仅为现场赛设置，网络赛获奖证书请联系交流群管理员
               <br />
               > 特等奖1队，专为 AK 队设置，无 AK 队不颁发
               <br />

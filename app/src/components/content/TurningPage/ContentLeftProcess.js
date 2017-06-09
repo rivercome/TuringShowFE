@@ -40,9 +40,8 @@ class ContentLeft extends React.Component {
             <h1 key="h1" id={`${props.id}-title`}>
               大赛流程
             </h1>
-            <p key="p" id={`${props.id}-content`} style={{lineHeight: 1.8}}>
-              <br />
-              1、 使用浏览器登陆「url」进行线上报名
+            <p key="p" id={`${props.id}-content`} style={{lineHeight: 1.8,textAlign: 'left'}}>
+              1、 使用浏览器访问 <a href="http://turing.acmclub.cn/">图灵杯官网</a> 进行线上报名
               <br />
               2、 等待短信通知参赛账号、比赛地点及座位
               <br />

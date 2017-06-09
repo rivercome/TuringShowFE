@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 import enquire from 'enquire.js'
 
 
-import LargeFooter from '../TurningPage/LargeFooter'
+import LargeFooter from './LargeFooter'
 import Banner from './Banner'
 import ContentLeft from './ContentLeft'
 import ContentRight from './ContentRight'

@@ -20,8 +20,8 @@ class SixPart extends React.Component {
       { icon: 'https://zos.alipayobjects.com/rmsportal/ScHBSdwpTkAHZkJ.png', title: '赛前宣讲', content: '【科技·新知】大讲堂压轴环节，图灵杯简单宣讲，简化枯燥无味的宣讲会，只给你最刺激有用的信息。' },
       { icon: 'https://zos.alipayobjects.com/rmsportal/MNdlBNhmDBLuzqp.png', title: '组队报名', content: '自由组队，3人抱团，结对编程。全新报名系统，流程体验。参赛信息短信通知，避免纸质参赛证，节能减排。' },
       { icon: 'https://zos.alipayobjects.com/rmsportal/NKBELAOuuKbofDD.png', title: '赛题准备', content: ' 多年竞赛经验的学长学姐们精心设计的题目，难度梯度分布均匀，总有一题适合你。' },
-      { icon: 'https://zos.alipayobjects.com/rmsportal/ipwaQLBLflRfUrg.png', title: '比赛进行', content: 'ACM 俱乐部协同计算机与通信工程学院为您打造最舒适的服务，我们有专业的监考人员，我们专业的比赛环节。' },
-      { icon: 'https://zos.alipayobjects.com/rmsportal/xMSBjgxBhKfyMWX.png', title: '结果通知', content: '每一位参赛者都期待自己的努力成果，我们努力做好通知工作，为每一位参赛者最有用的引导。' },
+      { icon: 'https://zos.alipayobjects.com/rmsportal/ipwaQLBLflRfUrg.png', title: '比赛进行', content: '志愿者提前培训，技术人员全程坚守，为您打造最舒适竞赛服务。' },
+      { icon: 'https://zos.alipayobjects.com/rmsportal/xMSBjgxBhKfyMWX.png', title: '结果通知', content: '实时榜单动态更新，获奖赛后短信通知，网络赛获奖证书免费寄送。' },
       { icon: 'https://zos.alipayobjects.com/rmsportal/UsUmoBRyLvkIQeO.png', title: '颁奖典礼', content: '我们将为表现优异的团队颁发证书及奖品，以表彰他们出彩的表现。' },
 
     ];

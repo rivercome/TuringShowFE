@@ -12,7 +12,7 @@ const Rule = (props) => {
       >
         <div className="form-content-header" key="form-content-header">
           <div className="form-content-header-title">
-            第四届 NEUQ-ACM 图灵杯程序设计大赛（团队赛）
+            第四届『图灵杯』NEUQ-ACM程序设计竞赛 团队赛
             <br />
             比赛规则 & 注意事项，请参赛选手认真阅读
           </div>

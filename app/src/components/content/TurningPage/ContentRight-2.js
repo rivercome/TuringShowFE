@@ -47,15 +47,15 @@ class ContentRight extends React.Component {
             id={`${props.id}-textWrapper`}
           >
             <h1 key="h1" id={`${props.id}-title`}>
-              参赛条件 & 比赛须知
+              参赛须知
             </h1>
-            <p key="p" id={`${props.id}-content`}>
+            <p key="p" id={`${props.id}-content`} style={{textAlign: 'left'}}>
 
               1、东北大学秦皇岛分校、燕山大学在校生可参加现场赛
               <br/>
-              2、其余高校及社会人士可参加线上邀请赛，在 NEUQ-OJ 注册账号即可同步参赛。
+              2、其余高校及社会人士可参加线上邀请赛，报名网络赛后周六统一短信发送比赛账号及密码
               <br/>
-              3、入场验证：要求现场赛参赛选手携带学生证在赛前20分钟入场签到核验。
+              3、入场验证：要求现场赛参赛选手携带学生证在赛前20分钟入场签到核验。网络赛10点准时开赛。
               <br/>
               4、赛事工作人员将全程跟踪，如遇比赛系统崩溃，请保持秩序，工作人员将及时处理。
               <br/>

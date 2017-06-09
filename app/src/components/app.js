@@ -54,7 +54,7 @@ class AppComponent extends Component {
     }
     const hostPath = window.location.host.substr(0, 4)
     const meta = {
-      title: hostPath==='turi'?'第四届图灵杯':'科技·新知',
+      title: hostPath==='turi'?'图灵杯程序设计大赛':'科技 · 新知',
       description: hostPath==='turi'?'第四届 ACM 图灵杯团队赛':'以新知之手，绘科技未来',
       canonical: hostPath==='turi'?'http://turing.acmclub.cn':'http://newtech.acmclub.cn',
       meta: {

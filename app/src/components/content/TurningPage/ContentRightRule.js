@@ -49,13 +49,12 @@ class ContentRightRule extends React.Component {
             <h1 key="h1" id={`${props.id}-title`}>
               比赛规则
             </h1>
-            <p key="p" id={`${props.id}-content`}>
-
+            <p key="p" id={`${props.id}-content`} style={{textAlign: 'left'}}>
               1、组队参赛，2～3人一队
               <br/>
               2、比赛时长5个小时、共10道题
               <br/>
-              3、预先报名、在现场使用比赛账号参赛
+              3、预先报名、使用比赛账号参赛
               <br/>
               4、支持C/C++/Java三种语言
               <br/>

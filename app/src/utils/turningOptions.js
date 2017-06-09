@@ -1,6 +1,6 @@
 const options = [{
-  value: '外校队伍无需报名登记',
-  label: '外校队伍无需报名登记',
+  value: '外校队伍请报名网络赛',
+  label: '外校队伍请报名网络赛',
 },{
   value: '燕山大学',
   label: '燕山大学',
