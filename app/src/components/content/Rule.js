@@ -18,6 +18,18 @@ const Rule = (props) => {
           </div>
           <br />
         </div>
+
+        <div key="rule-content-1">
+          <p className="rule-content-title">
+            #报名已截止！
+          </p >
+          <p className="rule-content-content">
+            本次图灵杯程序设计竞赛报名已结束，截止目前，已经有 500 多支队伍报名，参赛人数超过 1200 人，期待各位 ACMer 在本次竞赛中取得好成绩！
+            <br />
+            欢迎加入我们的 QQ 群（群号:516244766），以便于我们的的通知发送以及赛果分享！
+          </p>
+        </div>
+
         <div key="rule-content-1">
           <p className="rule-content-title">
             #大赛基本情况：
@@ -32,7 +44,7 @@ const Rule = (props) => {
             #大赛流程：
           </p >
           <p className="rule-content-content">
-            1、 使用浏览器登陆「url」进行线上报名
+            1、 使用浏览器访问 <a href="http://turing.acmclub.cn/">图灵杯官网</a> 进行线上报名
             <br />
             2、 等待短信通知参赛账号、比赛地点及座位
             <br />
@@ -98,14 +110,14 @@ const Rule = (props) => {
         </div>
         <div key="rule-content-5">
           <p className="rule-content-title">
-            #参赛条件&比赛须知：
+            #参赛须知：
           </p >
           <p className="rule-content-content">
-            1、 东北大学秦皇岛分校、燕山大学在校生可参加现场赛
+            1、东北大学秦皇岛分校、燕山大学在校生可参加现场赛。
             <br />
-            2、 其余高校及社会人士可参加线上邀请赛，在neuq-oj注册账号即可同步参赛。
+            2、其余高校及社会人士可参加线上邀请赛，报名网络赛后周六统一短信发送比赛账号及密码。
             <br />
-            3、 入场验证：要求现场赛参赛选手携带学生证在赛前20分钟入场签到核验。
+            3、入场验证：要求现场赛参赛选手携带学生证在赛前20分钟入场签到核验。网络赛10点准时开赛。
             <br />
             4、赛事工作人员将全程跟踪，如遇比赛系统崩溃，请保持秩序，工作人员将及时处理。
             <br />
@@ -116,6 +128,6 @@ const Rule = (props) => {
       </QueueAnim>
     </div>
   )
-  }
+}
 
-  export default Rule
+export default Rule

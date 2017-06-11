@@ -324,6 +324,7 @@ class ApplyTuring extends React.Component {
                 htmlType='submit'
                 className='form-button-1'
                 loading={this.state.loading}
+                disabled
               >
                 点击提交
               </Button>

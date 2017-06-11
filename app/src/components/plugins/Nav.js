@@ -27,7 +27,7 @@ class Header extends React.Component {
     const props = {...this.props}
     const isMode = props.isMode
     delete props.isMode
-    const navData = {'turing': '了解图灵杯', 'innovation': '科技 · 新知','applyTuring': '报名图灵杯','applyInnovation': '报名大讲堂' }
+    const navData = {'turing': '了解图灵杯', 'innovation': '科技 · 新知','certreq': '图灵杯证书','applyInnovation': '报名大讲堂' }
     const navChildren = Object.keys(navData)
       .map((key, i) => (<Item key={key}>{navData[key]}</Item>))
     return (

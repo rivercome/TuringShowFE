@@ -8,6 +8,7 @@ export default {
   mail: /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/,
   qq: /[1-9][0-9]{4,}/,
   number: /^[0-9]\d*$/,
+  postCode: /^\d{6}$/,
   age: /^(?:[1-9][0-9]?|1[01][0-9]|120)$/,
   chinese: /[\u4E00-\u9FA5\uF900-\uFA2D]/,
   studentId: /^\d{7,8}$/

@@ -50,7 +50,8 @@ p
             placeholder='Password'
           />
         </div>
-        <Select defaultValue="turning" style={{ width: 120 }} onChange={this.onSelectChange}>
+        <Select defaultValue="certreq" style={{ width: 120 }} onChange={this.onSelectChange}>
+          <Option value={'certreq'}>图灵杯证书</Option>
           <Option value={'turning'}>图灵杯现场赛</Option>
           <Option value={'turingOnline'}>图灵杯网络赛</Option>
           <Option value={'innovation'}>科技新知</Option>

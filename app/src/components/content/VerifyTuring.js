@@ -9,6 +9,7 @@ import {Link } from 'react-router'
 import 'whatwg-fetch'
 import 'es6-promise'
 import verify from '../../utils/Verify'
+import options from '../../utils/turningOptions'
 import goto from '../../utils/goto'
 
 import '../../static/css/applyTurning.css'
@@ -16,7 +17,7 @@ const FormItem = Form.Item
 const RadioGroup = Radio.Group
 
 @Form.create()
-class ApplyTuringOnline extends React.Component {
+class ApplyTuring extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -25,7 +26,6 @@ class ApplyTuringOnline extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
     this.checkTeamName = this.checkTeamName.bind(this)
     this.handleReset = this.handleReset.bind(this)
-
     this.isNeccessary=this.isNeccessary.bind(this)
   }
 
@@ -36,8 +36,12 @@ class ApplyTuringOnline extends React.Component {
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (err) {} else {
         message.loading('提交成功，正在验证')
-
-        fetch('/api/apply/submitTurningOnline', {
+        values.leaderClass = values.leaderClass.toString()
+        values.memberClass1 = values.memberClass1.toString()
+        if (!!values.memberClass2) {
+          values.memberClass2 = values.memberClass2.toString()
+        }
+        fetch('/api/apply/submitTurning', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
@@ -105,11 +109,11 @@ class ApplyTuringOnline extends React.Component {
           <div className="form-content-header-title">
             第四届 NEUQ-ACM 图灵杯程序设计大赛（团队赛）
             <br />
-            网络赛报名
+            暨 2017 中国大学生程序设计大赛校内选拔赛
           </div>
           <br />
           <div className="form-content-header-extra">
-            <Link to="/applyTuring">现场赛报名</Link>
+            <Link to="/applyTuringOnline">网络赛报名</Link>
             <Link to="/rule">点此查看比赛规则</Link>
           </div>
         </div>
@@ -146,16 +150,32 @@ class ApplyTuringOnline extends React.Component {
           )}
         </FormItem>
         <FormItem
-          label='队长学校'
+          label='队长专业'
           {...formItemLayout}
-          key="form-content-leader-school"
+          key="form-content-leader-class"
         >
-          {getFieldDecorator('leaderSchool', {
+          {getFieldDecorator('leaderClass', {
             rules: [{
-              required: true, message: '输入队长学校'
+              required: true, message: '请选择队长专业'
             }]
           })(
-            <Input className='form-content-input' />
+            <Cascader options={options} placeholder="请选择队长专业" className='form-content-input' />
+          )}
+        </FormItem>
+        <FormItem
+          label='队长学号'
+          {...formItemLayout}
+          key="form-content-leader-class-id"
+          hasFeedback
+        >
+          {getFieldDecorator('leaderStuId', {
+            rules: [{
+              pattern: verify.number, message: '请勿输入非数字字符！'
+            }, {
+              required: true, message: '请输入队长学号'
+            }]
+          })(
+            <Input className='form-content-input' />,
           )}
         </FormItem>
         <FormItem
@@ -221,16 +241,32 @@ class ApplyTuringOnline extends React.Component {
           )}
         </FormItem>
         <FormItem
-          label='队员1学校'
+          label='队员1专业'
           {...formItemLayout}
-          key="form-content-member-school-1"
+          key="form-content-member-class-1"
         >
-          {getFieldDecorator('memberSchool1', {
+          {getFieldDecorator('memberClass1', {
             rules: [{
-              required: true, message: '请输入队员1学校'
+              required: true, message: '请选择队员专业'
             }]
           })(
-            <Input className='form-content-input' />
+            <Cascader options={options} placeholder="请选择队员专业" className='form-content-input' />
+          )}
+        </FormItem>
+        <FormItem
+          label='队员1学号'
+          {...formItemLayout}
+          key="form-content-member-class-id-1"
+          hasFeedback
+        >
+          {getFieldDecorator('memberStuId1', {
+            rules: [{
+              pattern: verify.number, message: '请勿输入非数字字符！'
+            }, {
+              required: true, message: '请输入队员学号'
+            }]
+          })(
+            <Input className='form-content-input' />,
           )}
         </FormItem>
         <FormItem
@@ -250,16 +286,32 @@ class ApplyTuringOnline extends React.Component {
           )}
         </FormItem>
         <FormItem
-          label='队员2学校'
+          label='队员2专业'
           {...formItemLayout}
-          key="form-content-member-school-2"
+          key="form-content-member-class-2"
         >
-          {getFieldDecorator('memberSchool2', {
+          {getFieldDecorator('memberClass2', {
             rules: [{
-              required: this.isNeccessary(), message: '请输入队员2学校'
+              required: this.isNeccessary(), message: '请选择队员专业'
             }]
           })(
-            <Input className='form-content-input' />
+            <Cascader options={options} placeholder="请选择队员专业" className='form-content-input' />
+          )}
+        </FormItem>
+        <FormItem
+          label='队员2学号'
+          {...formItemLayout}
+          key="form-content-member-class-id-2"
+          hasFeedback
+        >
+          {getFieldDecorator('memberStuId2', {
+            rules: [{
+              pattern: verify.number, message: '请勿输入非数字字符！'
+            }, {
+              required: this.isNeccessary(), message: '请输入队员学号'
+            }]
+          })(
+            <Input className='form-content-input' />,
           )}
         </FormItem>
         <FormItem
@@ -272,6 +324,7 @@ class ApplyTuringOnline extends React.Component {
                 htmlType='submit'
                 className='form-button-1'
                 loading={this.state.loading}
+                disabled
               >
                 点击提交
               </Button>
@@ -280,7 +333,6 @@ class ApplyTuringOnline extends React.Component {
                 onClick={this.handleReset}
                 className='form-button-2'
                 style={{marginLeft: 20}}
-                disabled
               >
                 重置
               </Button>
@@ -293,4 +345,4 @@ class ApplyTuringOnline extends React.Component {
   }
 }
 
-export default ApplyTuringOnline
+export default ApplyTuring

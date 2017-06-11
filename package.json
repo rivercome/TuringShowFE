@@ -11,6 +11,7 @@
     "antd": "^2.10.1",
     "babel-plugin-import": "^1.1.1",
     "babel-runtime": "^6.11.6",
+    "china-division": "^1.1.0",
     "console-polyfill": "^0.2.2",
     "enquire": "^0.0.2",
     "gulp": "^3.9.1",

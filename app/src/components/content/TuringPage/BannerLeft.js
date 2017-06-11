@@ -76,9 +76,7 @@ class BannerLeft extends React.Component {
           id={`${props.id}-contentBlock0`}
         >
           <br />
-          <span style={{fontSize: 20}}>> 2017/6/11 10:00-15:00</span>
-          <br />
-          <a href="http://oj.acmclub.cn/contest.php" style={{fontSize: 20}}>http://oj.acmclub.cn</a>
+          <span style={{fontSize: 20}}>完美落幕</span>
           <br />
           一支队 三个人 五小时 十道题 一场代码的较量!
         </p>
@@ -87,14 +85,14 @@ class BannerLeft extends React.Component {
           key="button"
           size="large"
           style={{marginRight: 20}}
-          onClick={() => goto('/applyTuring')}
+          onClick={() => window.open('http://oj.acmclub.cn')}
           id={`${props.id}-buttonBlock0`}
         >
-          现场赛报名
+          前往 NEUQ-OJ
         </Button>
         <Button type="danger" ghost size='large' key="button-online" id={`${props.id}-button-online`}
-                onClick={() => goto('/applyTuringOnline')}>
-          网络赛报名
+                onClick={() => goto('/certreq')}>
+          证书领取登记
         </Button>
         <br />
         <br />

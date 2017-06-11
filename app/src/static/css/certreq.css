@@ -1,0 +1,17 @@
+.certreq-wrap {
+    margin: auto;
+    padding: 20px;
+}
+
+.certreq-header {
+    margin:  20px auto;
+}
+
+.form-button-certreq {
+    width: 100%;
+}
+
+.certreq-intro {
+    display: flex;
+    justify-content:space-between ;
+}

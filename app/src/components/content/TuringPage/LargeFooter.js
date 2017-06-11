@@ -4,7 +4,7 @@ import OverPack from 'rc-scroll-anim/lib/ScrollOverPack'
 import QueueAnim from 'rc-queue-anim'
 import acmLongLogo from '../../../static/images/acm_logo_long_small.png'
 import scienceLogo from '../../../static/images/science-logo.png'
-import coorper1 from '../../../static/images/logo.png'
+import coorper1 from '../../../static/images/logo-turing.png'
 import coorper2 from '../../../static/images/logo-2.png'
 
 class LargeFooter extends React.Component {
@@ -83,7 +83,11 @@ class LargeFooter extends React.Component {
         <li key={`${this.props.id}-block`} id={`${this.props.id}-block`}>
           <h2>赞助单位</h2>
           <ul>
-            <li><img width={250} src={coorper2} /></li>
+            <li>
+              <img width={250} src={coorper2} />
+              <br />
+              甲骨文（河北）OAEC 人才产业基地
+            </li>
           </ul>
         </li>
         <li key={'cooper'} id={`${this.props.id}-cooper`}>

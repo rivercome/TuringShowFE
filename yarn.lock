@@ -251,7 +251,7 @@ async@^1.5.2:
   version "1.5.2"
   resolved "http://registry.npm.taobao.org/async/download/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
 
-async@^2.1.2:
+async@^2.1.2, async@^2.1.4:
   version "2.4.0"
   resolved "http://registry.npm.taobao.org/async/download/async-2.4.0.tgz#4990200f18ea5b837c2cc4f8c031a6985c385611"
   dependencies:
@@ -1218,6 +1218,10 @@ buffer@^4.3.0:
     ieee754 "^1.1.4"
     isarray "^1.0.0"
 
+bufferhelper@^0.2.1:
+  version "0.2.1"
+  resolved "http://registry.npm.taobao.org/bufferhelper/download/bufferhelper-0.2.1.tgz#fa74a385724a58e242f04ad6646c2366f83b913e"
+
 builtin-modules@^1.0.0:
   version "1.1.1"
   resolved "http://registry.npm.taobao.org/builtin-modules/download/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
@@ -1303,6 +1307,14 @@ chalk@^0.5.0:
     has-ansi "^0.1.0"
     strip-ansi "^0.3.0"
     supports-color "^0.2.0"
+
+china-division@^1.1.0:
+  version "1.1.0"
+  resolved "http://registry.npm.taobao.org/china-division/download/china-division-1.1.0.tgz#37cdcd477c8a2f206697f73069cc4687e71239b1"
+  dependencies:
+    async "^2.1.4"
+    bufferhelper "^0.2.1"
+    iconv-lite "^0.4.15"
 
 chokidar@^1.4.3, chokidar@^1.6.0:
   version "1.7.0"
