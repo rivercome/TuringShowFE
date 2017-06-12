@@ -8,11 +8,11 @@ import QueueAnim from 'rc-queue-anim'
 import {Link } from 'react-router'
 import 'whatwg-fetch'
 import 'es6-promise'
-import verify from '../../utils/Verify'
-import options from '../../utils/turningOptions'
-import goto from '../../utils/goto'
+import verify from '../../../utils/Verify'
+import options from '../../../utils/turningOptions'
+import goto from '../../../utils/goto'
 
-import '../../static/css/applyTurning.css'
+import '../../../static/css/applyTurning.css'
 const FormItem = Form.Item
 const RadioGroup = Radio.Group
 
@@ -52,7 +52,7 @@ class ApplyTuring extends React.Component {
           return res.json()
         }).then((json) => {
           if (json.success) {
-            goto('/success?turing')
+            goto('/success/turing')
           } else {
             message.error(json.message)
           }
@@ -107,7 +107,7 @@ class ApplyTuring extends React.Component {
       >
         <div className="form-content-header" key="form-content-header">
           <div className="form-content-header-title">
-            第四届 NEUQ-ACM 图灵杯程序设计大赛（团队赛）
+            第四届图灵杯 NEUQ-ACM 程序设计竞赛（团队赛）
             <br />
             暨 2017 中国大学生程序设计大赛校内选拔赛
           </div>

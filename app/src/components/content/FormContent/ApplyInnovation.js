@@ -7,12 +7,12 @@ import React from 'react'
 import QueueAnim from 'rc-queue-anim'
 import 'whatwg-fetch'
 import 'es6-promise'
-import verify from '../../utils/Verify'
-import options from '../../utils/innovationOptions'
-import goto from '../../utils/goto'
+import verify from '../../../utils/Verify'
+import options from '../../../utils/innovationOptions'
+import goto from '../../../utils/goto'
 
-import '../../static/css/applyTurning.css'
-import '../../static/css/applyInnovation.css'
+import '../../../static/css/applyTurning.css'
+import '../../../static/css/applyInnovation.css'
 const FormItem = Form.Item
 const RadioGroup = Radio.Group
 
@@ -54,7 +54,7 @@ class ApplyInnovation extends React.Component {
           if (json.success) {
             let {applyId} = json.data
             applyId = applyId + 52
-            goto('/success?innovation='+ applyId)
+            goto('/success/innovation?id='+ applyId)
             message.success('提交成功!')
           } else {
             message.error(json.message)

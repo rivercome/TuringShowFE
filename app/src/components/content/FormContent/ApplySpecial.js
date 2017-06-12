@@ -7,11 +7,11 @@ import React from 'react'
 import QueueAnim from 'rc-queue-anim'
 import 'whatwg-fetch'
 import 'es6-promise'
-import verify from '../../utils/Verify'
-import options from '../../utils/innovationOptions'
-import goto from '../../utils/goto'
+import verify from '../../../utils/Verify'
+import options from '../../../utils/innovationOptions'
+import goto from '../../../utils/goto'
 
-import '../../static/css/applyTurning.css'
+import '../../../static/css/applyTurning.css'
 const FormItem = Form.Item
 const RadioGroup = Radio.Group
 
@@ -43,7 +43,7 @@ class ApplySpecial extends React.Component {
           return res.json()
         }).then((json) => {
           if (json.success) {
-            goto('/success?innovation')
+            goto('/success/innovation')
             message.success('提交成功!')
           } else {
             message.error(json.message)

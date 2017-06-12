@@ -7,11 +7,11 @@ import React from 'react'
 import QueueAnim from 'rc-queue-anim'
 import 'whatwg-fetch'
 import 'es6-promise'
-import verify from '../../utils/Verify'
-import options from '../../utils/CityOption'
-import goto from '../../utils/goto'
+import verify from '../../../utils/Verify'
+import options from '../../../utils/CityOption'
+import goto from '../../../utils/goto'
 
-import '../../static/css/certreq.css'
+import '../../../static/css/certreq.css'
 const FormItem = Form.Item
 const RadioGroup = Radio.Group
 
@@ -66,12 +66,12 @@ class Certreq extends React.Component {
             }
             let preData = json.data
             if (preData.address) {
-              const address = preData.address.split(' ')
-              preData.address = address
+              preData.address = preData.address.split(' ')
             }
             this.setState({
               preData: preData,
-              more: true
+              more: true,
+              type: preData.certreq
             })
           } else {
             if (type === '邮寄证书' || type === '电子 + 邮寄') {
@@ -84,7 +84,7 @@ class Certreq extends React.Component {
             const json = await this.fetchData('/api/apply/applyCertrep', values)
             if (json.success) {
               message.success('提交成功')
-              goto('/certreqSuccess')
+              goto('/success/certreq?true')
             } else {
               throw new Error(json.message)
             }
@@ -192,6 +192,24 @@ class Certreq extends React.Component {
     const moreContent = () => (
       <div key="form-content-more">
         <FormItem
+          label='是否需要证书'
+          {...formItemLayout}
+          key="form-content-certreq"
+        >
+          {getFieldDecorator('certreq', {
+            rules: [{required: true, message: '请选择'}],
+            onChange: this.certreqTypeChange,
+            initialValue: this.state.preData.certreq || ''
+          })(
+            <RadioGroup>
+              <Radio value='电子证书'>电子证书</Radio>
+              <Radio value='邮寄证书'>邮寄证书</Radio>
+              <Radio value='电子 + 邮寄'>电子 + 邮寄</Radio>
+              <Radio value='不需要证书'>不需要证书</Radio>
+            </RadioGroup>
+          )}
+        </FormItem>
+        <FormItem
           label='队长邮箱'
           {...formItemLayout}
           key="form-content-email"
@@ -217,7 +235,7 @@ class Certreq extends React.Component {
             rules: [{
               pattern: verify.chinese, message: '输入包含非中文字符！'
             }, {
-              required: true, message: '请输入队员姓名'
+              required: false, message: '请输入队员姓名'
             }],
             initialValue: this.state.preData.memberName1 || ''
           })(
@@ -266,13 +284,13 @@ class Certreq extends React.Component {
       >
         <div className="form-content-header certreq-header" key="form-content-header">
           <div className="form-content-header-title">
-            第四届 NEUQ-ACM 图灵杯程序设计大赛（团队赛）
+            第四届图灵杯 NEUQ-ACM 程序设计竞赛（团队赛）
             <br />
             证书邮寄登记
           </div>
           <br />
           <div className="certreq-intro" key="certreq-intro">
-            说明：感谢您填写此次表单，本表单用于对获奖队伍进行信息统计，您的输入将影响后续的证书邮寄等问题，以前填写的信息可以重新修改，邮箱地址用于接受电子版证书。如需邮寄证书，填写地址后，证书将邮寄给队长，收件人为队长姓名及手机号。请认真填写，大约需花费1 分钟。如果您未在本系统上登记过队伍信息，请联系管理员：QQ 97999713。
+            说明：感谢您填写此次表单，本表单用于对获奖队伍进行信息统计，您的输入将影响后续的证书邮寄等问题，以前填写的信息可以重新修改，邮箱地址用于接受电子版证书。如需邮寄证书，填写地址后，证书将邮寄给队长，收件人为队长姓名及手机号。请认真填写，大约需花费 1 分钟。如果您未在本系统上登记过队伍信息，请联系管理员：QQ 97999713。
           </div>
         </div>
         <FormItem
@@ -305,22 +323,6 @@ class Certreq extends React.Component {
             }]
           })(
             <Input className='form-content-input' />,
-          )}
-        </FormItem>
-        <FormItem
-          label='是否需要证书'
-          {...formItemLayout}
-          key="form-content-certreq"
-        >
-          {getFieldDecorator('certreq', {
-            rules: [{required: true, message: '请选择'}],
-            onChange: this.certreqTypeChange
-          })(
-            <RadioGroup>
-              <Radio value='电子证书'>电子证书</Radio>
-              <Radio value='邮寄证书'>邮寄证书</Radio>
-              <Radio value='电子 + 邮寄'>电子 + 邮寄</Radio>
-            </RadioGroup>
           )}
         </FormItem>
         {this.state.more && moreContent()}

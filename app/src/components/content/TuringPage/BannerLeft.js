@@ -85,10 +85,10 @@ class BannerLeft extends React.Component {
           key="button"
           size="large"
           style={{marginRight: 20}}
-          onClick={() => window.open('http://oj.acmclub.cn')}
+          onClick={() => goto('/turingFeedback')}
           id={`${props.id}-buttonBlock0`}
         >
-          前往 NEUQ-OJ
+          填写反馈问卷
         </Button>
         <Button type="danger" ghost size='large' key="button-online" id={`${props.id}-button-online`}
                 onClick={() => goto('/certreq')}>

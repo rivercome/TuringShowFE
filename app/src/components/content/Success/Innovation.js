@@ -1,22 +1,16 @@
 /**
- * Created by out_xu on 17/5/4.
+ * Created by out_xu on 17/6/12.
  */
 import React from 'react'
-import { Link } from 'react-router'
-import '../../static/css/success.css'
-import qq from '../../static/images/qq.png'
-import turing from '../../static/images/turing2017.png'
+import qq from '../../../static/images/qq.png'
 
-const Success = (props) => {
-  const {location: {search = '', query}} = props
-  if (!!query) {
-    console.log()
-  }
-  const content = (
+const Innovation = (props) => {
+  const {location: {query}} = props
+  return (
     <div className="success-title">
       <div>
         您好，您已经成功报名「科技 · 新知」 大讲堂第一讲。
-        {+query.innovation > 1 && <div>您是第 <span style={{fontSize: 26}}>{query.innovation}</span> 位报名的同学。</div>}
+        {+query.id > 1 && <div>您是第 <span style={{fontSize: 26}}>{query.id}</span> 位报名的同学。</div>}
       </div>
       <br />
       <div className="success-info">
@@ -24,7 +18,7 @@ const Success = (props) => {
         <br />
         活动地点： 科技楼9024
       </div>
-      {+query.innovation > 1 && <div>
+      {+query.id > 1 && <div>
         <br />
         在活动结束后，
         <br />
@@ -43,17 +37,9 @@ const Success = (props) => {
       </div>
     </div>
   )
-  return (
-    <div className="main-content">
-      {search === '?turing' ? <div className="display1">您的信息已经登记成功！<Link to="/rule">点此了解比赛规则</Link><br />
-        <br />
-        <div>
-          <img src={turing} width={300} />
-        </div>
-      </div> : content}
-
-    </div>
-  )
 }
 
-export default Success
+Innovation.propTypes = {}
+Innovation.defaultProps = {}
+
+export default Innovation
