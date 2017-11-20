@@ -10,7 +10,7 @@ import 'whatwg-fetch'
 import 'es6-promise'
 import verify from '../../../utils/Verify'
 import options from '../../../utils/turningOptions'
-
+import goto from '../../../utils/goto'
 import '../../../static/css/applyTurning.css'
 
 const FormItem = Form.Item
@@ -43,12 +43,9 @@ class ApplyTuring extends React.Component {
           body = {
             ...values,
             major: major[1],
-            faculty: major[0],
-            school: '东北大学秦皇岛分校'
+            faculty: major[0]
           }
         }
-        console.log(body)
-
         fetch('http://120.24.58.247/addstudent', {
           method: 'POST',
           headers: {
@@ -59,13 +56,11 @@ class ApplyTuring extends React.Component {
         }).then((res) => {
           return res.json()
         }).then((json) => {
-
-          console.log(json)
-          // if (json.success) {
-          //   goto('/success')
-          // } else {
-          //   message.error(json.message)
-          // }
+          if (json.code === 0) {
+            goto('/success?' + json.data.type)
+          } else {
+            message.error(json.message)
+          }
         }).catch((e) => {
           console.log(e.message)
         })
@@ -288,33 +283,37 @@ class ApplyTuring extends React.Component {
           )}
         </FormItem>
         <FormItem
-          label='报名蓝桥杯'
-          key="form-content-lanqiao"
+          label='参赛语言'
           {...formItemLayout}
+          key="form-content-team-language"
         >
-          {getFieldDecorator('lanqiao', {
-            rules: [{required: true, message: '请选择是或否'}],
+          {getFieldDecorator('language', {
+            rules: [{required: true, message: '请选择参赛语言'}],
           })(
             <RadioGroup>
-              <Radio value='是'>是</Radio>
-              <Radio value='否'>否</Radio>
+              <Radio value='C/C++'>C/C++</Radio>
+              <Radio value='Java'>Java</Radio>
             </RadioGroup>
           )}
         </FormItem>
-        {/*<FormItem*/}
-        {/*label='参赛语言'*/}
-        {/*{...formItemLayout}*/}
-        {/*key="form-content-team-language"*/}
-        {/*>*/}
-        {/*{getFieldDecorator('language', {*/}
-        {/*rules: [{required: true, message: '请选择参赛语言'}],*/}
-        {/*})(*/}
-        {/*<RadioGroup>*/}
-        {/*<Radio value='C/C++'>C/C++</Radio>*/}
-        {/*<Radio value='Java'>Java</Radio>*/}
-        {/*</RadioGroup>*/}
-        {/*)}*/}
-        {/*</FormItem>*/}
+        {
+          scType && (
+            <FormItem
+              label='报名蓝桥杯'
+              key="form-content-lanqiao"
+              {...formItemLayout}
+            >
+              {getFieldDecorator('lanqiaobei', {
+                rules: [{required: true, message: '请选择是或否'}],
+              })(
+                <RadioGroup>
+                  <Radio value='是'>是</Radio>
+                  <Radio value='否'>否</Radio>
+                </RadioGroup>
+              )}
+            </FormItem>
+          )
+        }
         <FormItem
           key="form-content-footer"
         >

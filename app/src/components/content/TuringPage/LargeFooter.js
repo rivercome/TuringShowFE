@@ -105,7 +105,7 @@ class LargeFooter extends React.Component {
         id={`${props.id}-content`}
       >
         <span>
-          Copyright © 2017 ACMCLUB &「科技·新知」大讲堂 Power By <a href="https://motion.ant.design/">Ant-Motion</a>.
+          Copyright © 2017 ACMCLUB & 不洗碗工作室 Power By <a href="https://motion.ant.design/">Ant-Motion</a>.
         </span>
       </TweenOne>
     </OverPack>)

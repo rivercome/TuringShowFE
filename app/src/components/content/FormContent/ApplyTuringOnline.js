@@ -35,8 +35,7 @@ class ApplyTuringOnline extends React.Component {
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (err) {} else {
         message.loading('提交成功，正在验证')
-
-        fetch('/api/apply/submitTurningOnline', {
+        fetch('http://120.24.58.247/addOnlineStudent', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
@@ -46,8 +45,8 @@ class ApplyTuringOnline extends React.Component {
         }).then((res) => {
           return res.json()
         }).then((json) => {
-          if (json.success) {
-            goto('/success/turing')
+          if (json.code === 0) {
+            goto('/success?' + json.data.type)
           } else {
             message.error(json.message)
           }
@@ -113,152 +112,66 @@ class ApplyTuringOnline extends React.Component {
           </div>
         </div>
         <FormItem
-          label='队伍名称'
-          {...formItemLayout}
-          key="form-content-team-name"
-          hasFeedback
+         label='姓名'
+         {...formItemLayout}
+         key="form-content-leader-name"
+         hasFeedback
         >
-          {getFieldDecorator('teamName', {
-            rules: [{
-              required: true, message: '请输入队伍名称！'
-            }, {
-              validator: this.checkTeamName
-            }]
-          })(
-            <Input className='form-content-input' />,
-          )}
-        </FormItem>
-        <FormItem
-          label='队长姓名'
-          {...formItemLayout}
-          key="form-content-leader-name"
-          hasFeedback
-        >
-          {getFieldDecorator('leaderName', {
+          {getFieldDecorator('name', {
             rules: [{
               pattern: verify.chinese, message: '输入包含非中文字符！'
             }, {
-              required: true, message: '请输入队长姓名'
+              required: true, message: '请输入姓名'
             }]
           })(
             <Input className='form-content-input' />,
           )}
         </FormItem>
         <FormItem
-          label='队长学校'
+          label='学校'
+          key="form-content-school"
           {...formItemLayout}
-          key="form-content-leader-school"
-        >
-          {getFieldDecorator('leaderSchool', {
-            rules: [{
-              required: true, message: '输入队长学校'
-            }]
-          })(
-            <Input className='form-content-input' />
-          )}
-        </FormItem>
-        <FormItem
-          label='队长手机号'
-          {...formItemLayout}
-          key="form-content-mobile"
           hasFeedback
         >
-          {getFieldDecorator('leaderMobile', {
+              {getFieldDecorator('school', {
+                rules: [{
+                  required: true, message: '请输入学校名称'
+                }]
+              })(
+                <Input className='form-content-input' />,
+              )}
+        </FormItem>
+         <FormItem
+           label='手机号'
+           {...formItemLayout}
+           key="form-content-mobile"
+           hasFeedback
+         >
+          {getFieldDecorator('mobile', {
             rules: [{
               pattern: verify.mobile, message: '输入的不是有效的手机号码！'
             }, {
-              required: true, message: '请输入队长的手机号码'
+              required: true, message: '请输入手机号码'
             }]
           })(
             <Input className='form-content-input' />,
           )}
         </FormItem>
+
         <FormItem
-          label='队长邮箱'
+          label='邮箱'
           {...formItemLayout}
           key="form-content-email"
           hasFeedback
         >
-          {getFieldDecorator('leaderMail', {
+          {getFieldDecorator('email', {
             rules: [{
               pattern: verify.mail, message: '输入的不是有效的邮箱！'
             }, {
-              required: true, message: '请输入您的邮箱'
+              required: false, message: '请输入您的邮箱'
             }]
           })(
             <Input className='form-content-input' />,
-          )}
-        </FormItem>
-        <FormItem
-          label='参赛语言'
-          {...formItemLayout}
-          key="form-content-team-language"
-        >
-          {getFieldDecorator('teamLanguage', {
-            rules: [{required: true, message: '请选择参赛语言'}],
-          })(
-            <RadioGroup>
-              <Radio value='C/C++'>C/C++</Radio>
-              <Radio value='Java'>Java</Radio>
-            </RadioGroup>
-          )}
-        </FormItem>
-        <FormItem
-          label='队员1姓名'
-          {...formItemLayout}
-          key="form-content-member-name-1"
-          hasFeedback
-        >
-          {getFieldDecorator('memberName1', {
-            rules: [{
-              pattern: verify.chinese, message: '输入包含非中文字符！'
-            }, {
-              required: true, message: '请输入队员姓名'
-            }]
-          })(
-            <Input className='form-content-input' />,
-          )}
-        </FormItem>
-        <FormItem
-          label='队员1学校'
-          {...formItemLayout}
-          key="form-content-member-school-1"
-        >
-          {getFieldDecorator('memberSchool1', {
-            rules: [{
-              required: true, message: '请输入队员1学校'
-            }]
-          })(
-            <Input className='form-content-input' />
-          )}
-        </FormItem>
-        <FormItem
-          label='队员2姓名'
-          {...formItemLayout}
-          key="form-content-member-name-2"
-          hasFeedback
-        >
-          {getFieldDecorator('memberName2', {
-            rules: [{
-              pattern: verify.chinese, message: '输入包含非中文字符！'
-            }, {
-              required: false, message: '请输入队员姓名'
-            }]
-          })(
-            <Input className='form-content-input' placeholder="二人队伍请直接提交"/>,
-          )}
-        </FormItem>
-        <FormItem
-          label='队员2学校'
-          {...formItemLayout}
-          key="form-content-member-school-2"
-        >
-          {getFieldDecorator('memberSchool2', {
-            rules: [{
-              required: this.isNeccessary(), message: '请输入队员2学校'
-            }]
-          })(
-            <Input className='form-content-input' />
           )}
         </FormItem>
         <FormItem
