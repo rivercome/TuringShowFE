@@ -6,7 +6,7 @@ import BannerAnim, { Element } from 'rc-banner-anim'
 import 'rc-banner-anim/assets/index.css'
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack'
 import goto from '../../../utils/goto'
-import logoOracle from '../../../static/images/logo-3.png'
+import logoOracle from '../../../static/images/acm_logo_long_small.png'
 const BgElement = Element.BgElement
 class BannerLeft extends React.Component {
 
@@ -50,10 +50,7 @@ class BannerLeft extends React.Component {
         key="text"
         id={`${props.id}-wrapperBlock0`}
       >
-        <img src={logoOracle} style={{maxWidth: 200}}/>
-        <br />
-        <span style={{fontSize: 12}}  key="content-footer-1">* 本次竞赛由甲骨文（河北）OAEC 人才产业基地独家赞助</span>
-        <br />
+        {/*<img src={logoOracle} style={{maxWidth: 200}}/>*/}
         <br />
         <span
           className="logo"
@@ -61,12 +58,12 @@ class BannerLeft extends React.Component {
           id={`${props.id}-titleBlock0`}
           style={{fontSize: 20}}
         >
-          第四届『图灵杯』
+          第五届『图灵杯』
           <br />
           NEUQ-ACM程序设计竞赛
           <br />
           <span style={{fontSize: 28}}>
-          团队赛
+          个人赛
           </span>
         </span>
         <br />
@@ -76,7 +73,7 @@ class BannerLeft extends React.Component {
           id={`${props.id}-contentBlock0`}
         >
           <br />
-          <span style={{fontSize: 20}}>完美落幕</span>
+          <span style={{fontSize: 20}}>等你来战</span>
           <br />
           一支队 三个人 五小时 十道题 一场代码的较量!
         </p>
@@ -85,14 +82,14 @@ class BannerLeft extends React.Component {
           key="button"
           size="large"
           style={{marginRight: 20}}
-          onClick={() => goto('/turingFeedback')}
+          onClick={() => goto('/applyTuring')}
           id={`${props.id}-buttonBlock0`}
         >
-          填写反馈问卷
+          报名现场赛
         </Button>
         <Button type="danger" ghost size='large' key="button-online" id={`${props.id}-button-online`}
-                onClick={() => goto('/certreq')}>
-          证书领取登记
+                onClick={() => goto('/applyOnline')}>
+          报名网络赛
         </Button>
         <br />
         <br />

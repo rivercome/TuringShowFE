@@ -1,10 +1,4 @@
 const options = [{
-  value: '外校队伍请报名网络赛',
-  label: '外校队伍请报名网络赛',
-},{
-  value: '燕山大学',
-  label: '燕山大学',
-},{
   value: '管理学院',
   label: '管理学院',
   children: [{

@@ -11,7 +11,7 @@ class Download extends Component {
     super(props)
     this.state = {
       password: '',
-      type: 'turning'
+      type: 'certreq'
     }
     this.onClick = this.onClick.bind(this)
     this.onChange = this.onChange.bind(this)
@@ -28,7 +28,7 @@ class Download extends Component {
       type: value,
     })
   }
-p
+
   onClick () {
     const {password, type} = this.state
     let url = '/api/apply/download?' + 'password=' + password + '&type=' + type
@@ -60,7 +60,7 @@ p
         </Select>
 
         <Button
-          type='primary'
+          type='danger'
           className='download-button'
           onClick={this.onClick}
           loading={this.state.loading}

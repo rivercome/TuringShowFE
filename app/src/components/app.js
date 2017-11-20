@@ -48,21 +48,14 @@ class AppComponent extends Component {
       }
     }
     const footer = () =>{
-      if (path === 'applyTuring'||path === 'rule'||path === 'applyTuringOnline'||path === 'turingFeedback') {
+      if (path === 'applyTuring'||path === 'rule'||path === 'applyOnline'||path === 'turingFeedback') {
         return <Footer id="footer" key="footer" isMode={this.state.isMode} />
       }
     }
-    const hostPath = window.location.host.substr(0, 4)
     const meta = {
-      title: hostPath==='turi'?'图灵杯程序设计大赛':'科技 · 新知',
-      description: hostPath==='turi'?'第四届 ACM 图灵杯团队赛':'以新知之手，绘科技未来',
-      canonical: hostPath==='turi'?'http://turing.acmclub.cn':'http://newtech.acmclub.cn',
-      meta: {
-        charset: 'utf-8',
-        name: {
-          keywords: 'turing,newtech'
-        }
-      }
+      title: '图灵杯程序设计大赛',
+      description:'第五届 ACM 图灵杯个人赛',
+      canonical: 'http://turing.acmclub.cn'
     };
     return (
       <div className="app">

@@ -23,12 +23,23 @@ class Certreq extends React.Component {
       loading: false,
       more: false,
       preData: {},
-      type: ''
+      type: '',
+      disabled: false
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleReset = this.handleReset.bind(this)
     this.handleSelectChange = this.handleSelectChange.bind(this)
     this.certreqTypeChange = this.certreqTypeChange.bind(this)
+  }
+
+  componentDidMount () {
+    const now = Date.now()
+    const target = new Date(1497362400000)
+    if (now > target) {
+      this.setState({
+        disabled: true
+      })
+    }
   }
 
   fetchData = async (url, body) => {
@@ -183,6 +194,9 @@ class Certreq extends React.Component {
 
     const buttonString = () => {
       let {type, more} = this.state
+      if (this.state.disabled) {
+        return '登记已结束'
+      }
       if (!more) {
         return '点击校验，校验成功进入下一步'
       } else {
@@ -336,6 +350,7 @@ class Certreq extends React.Component {
                 type='primary' htmlType='submit' size='large'
                 className='form-button-certreq'
                 loading={this.state.loading}
+                disabled = {this.state.disabled}
               >
                 {buttonString()}
               </Button>

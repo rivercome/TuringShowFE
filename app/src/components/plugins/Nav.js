@@ -3,8 +3,10 @@ import TweenOne from 'rc-tween-one'
 import { Menu } from 'antd'
 import goto from '../../utils/goto'
 import logo from '../../static/images/acm_logo_long.png'
-import {Link} from 'react-router'
+import { Link } from 'react-router'
+
 const Item = Menu.Item
+
 class Header extends React.Component {
   constructor (props) {
     super(props)
@@ -27,7 +29,7 @@ class Header extends React.Component {
     const props = {...this.props}
     const isMode = props.isMode
     delete props.isMode
-    const navData = {'turing': '了解图灵杯', 'innovation': '科技 · 新知','certreq': '图灵杯证书','applyInnovation': '报名大讲堂' }
+    const navData = {'turing': '了解图灵杯', 'rule': '比赛规则'}
     const navChildren = Object.keys(navData)
       .map((key, i) => (<Item key={key}>{navData[key]}</Item>))
     return (

@@ -25,7 +25,6 @@ class ApplyTuringOnline extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
     this.checkTeamName = this.checkTeamName.bind(this)
     this.handleReset = this.handleReset.bind(this)
-
     this.isNeccessary=this.isNeccessary.bind(this)
   }
 
