@@ -43,8 +43,7 @@ class ApplyTuring extends React.Component {
           body = {
             ...values,
             major: major[1],
-            faculty: major[0],
-             school:'东北大学秦皇岛分校',
+            faculty: major[0]
           }
         }
         fetch('http://120.24.58.247/addstudent', {
