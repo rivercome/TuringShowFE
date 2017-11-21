@@ -50,7 +50,7 @@ class BannerLeft extends React.Component {
         key="text"
         id={`${props.id}-wrapperBlock0`}
       >
-        {/*<img src={logoOracle} style={{maxWidth: 200}}/>*/}
+        <img src={logoOracle} style={{maxWidth: 200}}/>
         <br />
         <span
           className="logo"
@@ -60,11 +60,11 @@ class BannerLeft extends React.Component {
         >
           第五届『图灵杯』
           <br />
-          NEUQ-ACM程序设计竞赛
+          NEUQ-ACM程序设计竞赛(个人赛)暨
           <br />
-          <span style={{fontSize: 28}}>
-          个人赛
-          </span>
+          第九届“蓝桥杯”（软件组）校内选拔赛
+          <br />
+
         </span>
         <br />
 
@@ -72,10 +72,21 @@ class BannerLeft extends React.Component {
           key="content"
           id={`${props.id}-contentBlock0`}
         >
-          <br />
+
           <span style={{fontSize: 20}}>等你来战</span>
           <br />
-          一支队 三个人 五小时 十道题 一场代码的较量!
+          <br />
+          一个人 四小时 十道题 一场实力的较量!
+          <br />
+
+          本次比赛福利多多
+          <br />
+          ->冠，亚，季军机械键盘
+          <br />
+          ->校级奖项学分奖励
+          <br />
+          ->最强班级超巨型零食大礼包
+
         </p>
         <Button
           type="ghost"

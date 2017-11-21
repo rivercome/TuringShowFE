@@ -101,7 +101,7 @@ class ApplyTuringOnline extends React.Component {
       >
         <div className="form-content-header" key="form-content-header">
           <div className="form-content-header-title">
-            第四届图灵杯 NEUQ-ACM 程序设计竞赛（团队赛）
+            第五届图灵杯 NEUQ-ACM 程序设计竞赛（个人赛）
             <br />
             网络赛报名
           </div>

@@ -45,13 +45,14 @@ class ContentRight extends React.Component {
             id={`${props.id}-textWrapper`}
           >
             <h1 key="h1" id={`${props.id}-title`}>
-              What is ACM?
+              What is NEUQ-ACM?
             </h1>
             <p key="p" id={`${props.id}-content`}>
               Association for Computing Machinery，计算机协会。
               <br />
-              NEUQ ACMCLub，东秦最出彩的计算机俱乐部，我们有最专业的竞赛团队，我们有最前沿的竞赛资源，我们有最专业的竞赛培训体制。
-              我们与计算机与通信工程学院强强联合，为您共同打造一场编程盛会！
+              ACM俱乐部成立于2013年12月，是以ACM/ICPC国际大学生程序大赛为依托建立起的社团。俱乐部以提高全校编程水平及代表学校参加各类各项ACM ICPC/CCPC系列赛事为主要任务，以推广ACM竞赛为宗旨，培养学生动手能力，营造创新氛围，促进教学发展。俱乐部为学校取得了多项国家国际级荣誉，为学校科技创新事业做出了突出贡献。指导教师：王和兴。
+              主要成就：在2017年10月举办的ACM ICPC／CCPC 大学生程序设计竞赛中，斩获2铜。 2017年10月联合创协、计工学院学生会，成功举办了第一届河北省大学生程序设计竞赛 和 2017 CCPC中国大学生程序设计竞赛（秦皇岛站）。在2016年中国高校计算机大赛中荣获河北省冠军团队。
+
             </p>
           </QueueAnim>
         </OverPack>

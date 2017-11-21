@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import turing from '../../../static/images/turing2017.png'
+import turing from '../../../static/images/qqgroup.png'
 
 const Turing = (props) => {
   console.log(props.location.search)

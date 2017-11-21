@@ -41,17 +41,17 @@ class ContentLeft extends React.Component {
               奖项设置 & <Link to="/applyTuring">点我报名 </Link>
             </h1>
             <p key="p" id={`${props.id}-content`} style={{lineHeight: 1.8,textAlign: 'left'}}>
-              * 以下奖项仅为现场赛设置，网络赛获奖证书请联系交流群管理员
+              * 以下奖项仅为现场赛设置
+              > 一等奖10% 二等奖15% 三等奖20%
               <br />
-              > 特等奖1队，专为 AK 队设置，无 AK 队不颁发
+              > 最佳女选手
               <br />
-              > 一等奖10% 二等奖20% 三等奖30%
+              >顽强拼搏选手
               <br />
-              > 首杀奖10队，颁发给每道题第一个提交正确的队伍
+              > 班级团队奖项
+              >一等奖1队 ， 二等奖2队 ， 三等奖5队
               <br />
-              > 优秀新人奖3队，排名最高的前三个纯2016级队伍
-              <br />
-              > 优秀女生奖3队，排名最高的前三个女生队伍
+              >凡参赛者发纪念章徽章1枚
             </p>
           </QueueAnim>
           <TweenOne

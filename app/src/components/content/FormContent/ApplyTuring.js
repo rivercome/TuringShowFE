@@ -43,7 +43,8 @@ class ApplyTuring extends React.Component {
           body = {
             ...values,
             major: major[1],
-            faculty: major[0]
+            faculty: major[0],
+             school:'东北大学秦皇岛分校',
           }
         }
         fetch('http://120.24.58.247/addstudent', {
@@ -102,7 +103,7 @@ class ApplyTuring extends React.Component {
           <div className="form-content-header-title">
             第五届图灵杯 NEUQ-ACM 程序设计竞赛（个人赛）
             <br />
-            暨 2017 中国大学生程序设计大赛校内选拔赛
+            暨 第九届蓝桥杯校内选拔赛
           </div>
           <br />
           <div className="form-content-header-extra">
@@ -118,7 +119,7 @@ class ApplyTuring extends React.Component {
          >
           {getFieldDecorator('school_type', {
             initialValue: '本校',
-            rules: [{required: true, message: '请选择参赛语言'}],
+            rules: [{required: true, message: '请选择本校或外校'}],
           })(
             <RadioGroup>
               <Radio value='本校'>本校</Radio>
@@ -237,7 +238,7 @@ class ApplyTuring extends React.Component {
               >
                 {getFieldDecorator('stunum', {
                   rules: [{
-                    pattern: verify.number, message: '请勿输入非数字字符！'
+                    pattern: verify.number, message: '请输入数字学号！'
                   }, {
                     required: true, message: '请输入学号'
                   }]
@@ -297,7 +298,7 @@ class ApplyTuring extends React.Component {
           )}
         </FormItem>
         {
-          scType && (
+          !scType && (
             <FormItem
               label='报名蓝桥杯'
               key="form-content-lanqiao"

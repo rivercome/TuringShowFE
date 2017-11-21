@@ -17,11 +17,11 @@ class SixPart extends React.Component {
     delete props.isMode;
     const oneAnim = { y: '+=30', opacity: 0, type: 'from', ease: 'easeOutQuad' };
     const blockArray = [
-      { icon: 'https://zos.alipayobjects.com/rmsportal/ScHBSdwpTkAHZkJ.png', title: '赛前宣讲', content: '【科技·新知】大讲堂压轴环节，图灵杯简单宣讲，简化枯燥无味的宣讲会，只给你最刺激有用的信息。' },
-      { icon: 'https://zos.alipayobjects.com/rmsportal/MNdlBNhmDBLuzqp.png', title: '组队报名', content: '自由组队，3人抱团，结对编程。全新报名系统，流程体验。参赛信息短信通知，避免纸质参赛证，节能减排。' },
+      { icon: 'https://zos.alipayobjects.com/rmsportal/ScHBSdwpTkAHZkJ.png', title: '赛前宣讲', content: '想了解更多，快快来参加我们的宣讲会吧' },
+      { icon: 'https://zos.alipayobjects.com/rmsportal/MNdlBNhmDBLuzqp.png', title: '个人报名', content: '单枪匹马，沉迷编程。全新报名系统，流程体验。参赛信息短信通知，避免纸质参赛证，节能减排。' },
       { icon: 'https://zos.alipayobjects.com/rmsportal/NKBELAOuuKbofDD.png', title: '赛题准备', content: ' 多年竞赛经验的学长学姐们精心设计的题目，难度梯度分布均匀，总有一题适合你。' },
       { icon: 'https://zos.alipayobjects.com/rmsportal/ipwaQLBLflRfUrg.png', title: '比赛进行', content: '志愿者提前培训，技术人员全程坚守，为您打造最舒适竞赛服务。' },
-      { icon: 'https://zos.alipayobjects.com/rmsportal/xMSBjgxBhKfyMWX.png', title: '结果通知', content: '实时榜单动态更新，获奖赛后短信通知，网络赛获奖证书免费寄送。' },
+      { icon: 'https://zos.alipayobjects.com/rmsportal/xMSBjgxBhKfyMWX.png', title: '结果通知', content: '实时榜单动态更新，获奖赛后通知。' },
       { icon: 'https://zos.alipayobjects.com/rmsportal/UsUmoBRyLvkIQeO.png', title: '颁奖典礼', content: '我们将为表现优异的团队颁发证书及奖品，以表彰他们出彩的表现。' },
 
     ];

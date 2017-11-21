@@ -52,7 +52,7 @@ class LargeFooter extends React.Component {
       },
       {
         title: '承办单位',
-        content: '计算机与通信工程学院团委学生会\n计算机与通信工程学院科技创新部\n东北大学秦皇岛分校ACM俱乐部',
+        content: '计算机与通信工程学院团委学生会\n计算机与通信工程学院创新创业协会\n东北大学秦皇岛分校ACM俱乐部',
         contentLink: 'http://jsjytx.neuq.edu.cn\nhttp://jsjytx.neuq.edu.cn\nhttp://www.acmclub.cn'
       }
     ]
@@ -81,21 +81,28 @@ class LargeFooter extends React.Component {
 
         { turingChildrenToRender }
         <li key={`${this.props.id}-block`} id={`${this.props.id}-block`}>
-          <h2>赞助单位</h2>
+          <h2>赛事委员会</h2>
           <ul>
             <li>
-              <img width={250} src={coorper2} />
+              {/*<img width={250} src={coorper2} />*/}
+
+             计算机与通信工程学院院长刘杰民
               <br />
-              甲骨文（河北）OAEC 人才产业基地
+
+              计算机与通信工程学院创新创业协会
+              <br />
+
+              NEUQ-ACMClub
+              <br />
             </li>
           </ul>
         </li>
         <li key={'cooper'} id={`${this.props.id}-cooper`}>
-          <h2>支持单位</h2>
-          <ul>
-            <li><img width={250} src={coorper1 } /></li>
-            {/*<li>More</li>*/}
-          </ul>
+
+          {/*<ul>*/}
+            {/*<li><img width={250} src={coorper1 } /></li>*/}
+            {/*/!*<li>More</li>*!/*/}
+          {/*</ul>*/}
         </li>
       </QueueAnim>
       <TweenOne

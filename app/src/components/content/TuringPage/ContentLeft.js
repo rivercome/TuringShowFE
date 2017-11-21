@@ -36,12 +36,16 @@ class ContentLeft extends React.Component {
             id={`${props.id}-textWrapper`}
           >
             <h1 key="h1" id={`${props.id}-title`}>
-              What is CCPC/ICPC?
+             赛前准备
             </h1>
             <p key="p" id={`${props.id}-content`}>
-              China Collegiate Programming Contest / International Collegiate Programming Contest
+
               <br />
-              最顶级的程序设计竞赛舞台，最庞大的程序设计年度赛事，旨在激励当代大学生运用计算机编程技术和技能来解决实际问题，激发其学习算法和程序设计的兴趣，培养其团队合作意识、创新能力和挑战精神。
+              1.百度传课搜索【NEUQ-ACMClub SummerCamp 2017新生编程训练营】
+              链接：<a >https://chuanke.baidu.com/1089085-229477.html#cart</a>
+              <br />
+              2.newoj
+              链接：<a>http://newoj.acmclub.cn/</a>
             </p>
           </QueueAnim>
           <TweenOne
@@ -52,7 +56,7 @@ class ContentLeft extends React.Component {
             resetStyleBool
           >
             <span id={`${props.id}-img`}>
-              <img width="100%" src="https://zos.alipayobjects.com/rmsportal/tvQTfCupGUFKSfQ.png" />
+              <img width="90%" src="https://zos.alipayobjects.com/rmsportal/tvQTfCupGUFKSfQ.png" />
             </span>
           </TweenOne>
         </OverPack>
