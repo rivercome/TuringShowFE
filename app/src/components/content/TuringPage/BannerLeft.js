@@ -76,7 +76,7 @@ class BannerLeft extends React.Component {
           <span style={{fontSize: 20}}>等你来战</span>
           <br />
           <br />
-          一个人 四小时 十道题 一场实力的较量!
+          一个人 四小时 十二道题 一场实力的较量!
           <br />
 
           本次比赛福利多多

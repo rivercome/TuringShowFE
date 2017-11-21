@@ -52,7 +52,7 @@ class ContentRightRule extends React.Component {
             <p key="p" id={`${props.id}-content`} style={{textAlign: 'left'}}>
               1、个人比赛，禁止讨论
               <br/>
-              2、比赛时长4个小时、共10道题
+              2、比赛时长4个小时、共12道题
               <br/>
               3、预先报名、使用比赛账号参赛
               <br/>

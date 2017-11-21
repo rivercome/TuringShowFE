@@ -36,6 +36,7 @@ class ApplyTuring extends React.Component {
         message.loading('提交成功，正在验证')
         const {major = [], school_type = "本校"} = values
         const scType = school_type === '外校'
+        const school="东北大学秦皇岛分校"
         let body = {}
         if (scType) {
           body = values
@@ -43,7 +44,8 @@ class ApplyTuring extends React.Component {
           body = {
             ...values,
             major: major[1],
-            faculty: major[0]
+            faculty: major[0],
+            school:"东北大学秦皇岛分校",
           }
         }
         fetch('http://120.24.58.247/addstudent', {
@@ -214,7 +216,7 @@ class ApplyTuring extends React.Component {
               </FormItem>
               <FormItem
                 label='班级'
-                help="如：计算机类1601班 或 21531班"
+                help="如：1701 或 21531"
                 key="form-content-class"
                 {...formItemLayout}
                 hasFeedback
