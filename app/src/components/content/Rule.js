@@ -21,7 +21,7 @@ const Rule = (props) => {
 
         <div key="rule-content-1">
           <p className="rule-content-title">
-            #报名还在继续！
+            报名还在继续！
           </p >
           <p className="rule-content-content">
 
@@ -32,17 +32,17 @@ const Rule = (props) => {
 
         <div key="rule-content-1">
           <p className="rule-content-title">
-            #大赛基本情况：
+            大赛基本情况：
           </p >
           <p className="rule-content-content">
-            从2014年举办第一届“图灵杯”程序设计大赛起，迄今已经成功地举办了四届，受到了全校热爱编程同学的欢迎，学生中的影响力越来越大。活动既突出专业特色又寓教于乐，不断提高学生的程序设计水平，在学生中形成了良好的科技创新氛围。比赛平台由ACM俱乐部技术部独立开发完成，组织运作也由ACM俱乐部组织协作开展。
+            从2013年举办第一届“图灵杯”程序设计大赛起，迄今已经成功地举办了四届，受到了全校热爱编程同学的欢迎，学生中的影响力越来越大。活动既突出专业特色又寓教于乐，不断提高学生的程序设计水平，在学生中形成了良好的科技创新氛围。比赛平台由ACM俱乐部技术部独立开发完成，组织运作也由ACM俱乐部组织协作开展。
             这项赛事的从无到有，从小到大，倾注了王和兴老师和一代代俱乐部成员的心血。经过全体成员的不懈努力，参赛人数逐年递增，图灵杯从第一届举办时只有不到百人参赛，到第四届图灵杯团队赛举办时已有来自全国八十多所高校的401支队伍，共计1203人参与比赛。
             这是一项与俱乐部共同发展的赛事，也见证了ACM在东秦这块沃土上的成长。现在的图灵杯已经成为了NEUQ-ACM的一张名片，它见证了我们这些ACMer的成长，也将激励东秦的ACMer不断攀登新的高峰。
           </p>
         </div>
         <div key="rule-content-2">
           <p className="rule-content-title">
-            #大赛流程：
+            大赛流程：
           </p >
           <p className="rule-content-content">
             1、 使用浏览器访问 <a href="http://turing.acmclub.cn/">图灵杯官网</a> 进行线上报名
@@ -60,7 +60,7 @@ const Rule = (props) => {
         </div>
         <div key="rule-content-3">
           <p className="rule-content-title">
-            #比赛规则：
+            比赛规则：
           </p >
           <p className="rule-content-content">
             1、 个人参赛
@@ -69,7 +69,9 @@ const Rule = (props) => {
             <br />
 
             3、 本次比赛现场使用NEUQ-OJ（http://oj.acmclub.cn），
+            <br />
             网络赛使用newoj(http://http://newoj.acmclub.cn/)
+            <br />
             参赛队员需预先报名、在现场使用比赛账号参赛，否则不计入成绩
             <br />
 
@@ -93,7 +95,7 @@ const Rule = (props) => {
 
         <div key="rule-content-4">
           <p className="rule-content-title">
-            #奖项设置：
+            奖项设置：
           </p >
           <p className="rule-content-content">
             * 以下奖项仅为现场赛设置
@@ -120,7 +122,7 @@ const Rule = (props) => {
         </div>
         <div key="rule-content-5">
           <p className="rule-content-title">
-            #参赛须知：
+            参赛须知：
           </p >
           <p className="rule-content-content">
             1、东北大学秦皇岛分校、燕山大学在校生可参加现场赛。
@@ -141,7 +143,7 @@ const Rule = (props) => {
             <br />
             （1）竞赛题目共12题，将分为3个梯级：
             <br />
-            &nbsp;&nbsp;初级设6道题，其中5分、10分、20分的题各2道，满分为60分；
+            &nbsp;&nbsp;初级设6道题，其中5分、10分、20分的题各2道，满分为70分；
             <br />
             &nbsp;&nbsp;中级设3道题，每道题30分，满分为90分；
             <br />
@@ -156,7 +158,7 @@ const Rule = (props) => {
             （5）班级得分首先根据所有班级成员的总有效得分进行排名。在决定获奖队伍时，如果多支队伍总有效分相同，则根据其最高级别的有效分进行排名；若还有并列，则根据其最高级别完整解决问题的总个数进行排名；若仍然并列，则获得并列名次。
           </p>
 
-        </div>>
+        </div>
       </QueueAnim>
     </div>
   )

@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react'
 import { Button, Icon } from 'antd'
+import {Link} from 'react-router'
 import QueueAnim from 'rc-queue-anim'
 import TweenOne, { TweenOneGroup } from 'rc-tween-one'
 import BannerAnim, { Element } from 'rc-banner-anim'
@@ -64,17 +65,17 @@ class BannerLeft extends React.Component {
           <br />
           第九届“蓝桥杯”（软件组）校内选拔赛
           <br />
-
         </span>
-        <br />
-
         <p
           key="content"
           id={`${props.id}-contentBlock0`}
         >
-
-          <span style={{fontSize: 20}}>等你来战</span>
+          {/*<Link to="/rule">更有创新赛制</Link>*/}
           <br />
+          <span style={{fontSize: 20}}>等你来战</span>
+
+
+
           <br />
           一个人 四小时 十二道题 一场实力的较量!
           <br />
@@ -98,9 +99,35 @@ class BannerLeft extends React.Component {
         >
           报名现场赛
         </Button>
-        <Button type="danger" ghost size='large' key="button-online" id={`${props.id}-button-online`}
+        <Button
+          type="danger"
+          ghost size='large'
+          key="button-online"
+          id={`${props.id}-button-online`}
                 onClick={() => goto('/applyOnline')}>
           报名网络赛
+        </Button>
+        <br />
+        <br />
+        <Button
+          type="danger"
+          key="button-newrule"
+          size="large"
+          style={{marginRight: 20}}
+          onClick={() => goto('/rule')}
+        >
+          了解新赛制
+        </Button>
+
+        <Button
+          type="danger"
+          key="button-intonewoj"
+          size="large"
+
+          // onClick={() => goto('/TuringFeedback')}
+          id={`${props.id}-buttonBlock0`}
+        >
+          <a href="http://newoj.acmclub.cn">新 OJ 入口</a>
         </Button>
         <br />
         <br />
@@ -125,15 +152,15 @@ class BannerLeft extends React.Component {
             {childrenToRender}
           </BannerAnim>
         </TweenOneGroup>
-        <TweenOne
-          animation={{y: '-=20', yoyo: true, repeat: -1, duration: 1000}}
-          className={`${props.className}-icon`}
-          style={{bottom: 10}}
-          key="icon"
-        >
-          <br />
-          <Icon type="down" />
-        </TweenOne>
+        {/*<TweenOne*/}
+          {/*animation={{y: '-=20', yoyo: true, repeat: -1, duration: 1000}}*/}
+          {/*className={`${props.className}-icon`}*/}
+          {/*style={{bottom: 10}}*/}
+          {/*key="icon"*/}
+        {/*>*/}
+          {/*<br />*/}
+          {/*<Icon type="down" />*/}
+        {/*</TweenOne>*/}
       </OverPack>
     )
   }

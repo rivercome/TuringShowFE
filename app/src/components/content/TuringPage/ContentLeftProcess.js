@@ -51,7 +51,7 @@ class ContentLeft extends React.Component {
               <br />
               5、 比赛时间4个小时，在最后40分钟封榜，不实时更新排名
               <br />
-              6、 等待短信通知并出席颁奖典礼。
+              6、 等待通知并出席颁奖典礼。
 
             </p>
           </QueueAnim>

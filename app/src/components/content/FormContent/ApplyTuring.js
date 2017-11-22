@@ -223,9 +223,9 @@ class ApplyTuring extends React.Component {
               >
                 {getFieldDecorator('class', {
                   rules: [{
-                    pattern: verify.number, message: '请勿输入非数字字符！'
+                    // pattern: verify.number, message: '请勿输入非数字字符！'
                   }, {
-                    required: true, message: '请输入班级'
+                    required: true, message: '请输入班级如计算机类1702或215103'
                   }]
                 })(
                   <Input className='form-content-input' />,

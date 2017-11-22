@@ -125,13 +125,13 @@ class TuringFeedback extends React.Component {
       >
         <div className="form-content-header certreq-header" key="form-content-header">
           <div className="form-content-header-title">
-            第四届图灵杯 NEUQ-ACM 程序设计竞赛（团队赛）
+            第五届图灵杯 NEUQ-ACM 程序设计竞赛（个人赛）
             <br />
             意见收集
           </div>
           <br />
           <div className="certreq-intro" key="turing-feedback-intro">
-            说明：感谢您填写此次表单，本表单用于对第四届图灵杯 NEUQ-ACM 程序设计竞赛（团队赛）进行意见收集及信息反馈。请认真填写，大约需花费
+            说明：感谢您填写此次表单，本表单用于对第五届图灵杯 NEUQ-ACM 程序设计竞赛（个人赛）进行意见收集及信息反馈。请认真填写，大约需花费
             1 分钟，谢谢您的配合。
           </div>
         </div>

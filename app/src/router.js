@@ -24,6 +24,7 @@ const RouterApp = (props) => (
       <Route path="download" component={Download} />
       <Route path="rule" component={Rule} />
       <Route path="success" component={Success}>
+        {/*<Route path="">*/}
         <IndexRoute component={TuringSuccess} />
       </Route>
     </Route>

@@ -49,7 +49,7 @@ class ContentRightRule extends React.Component {
             <h1 key="h1" id={`${props.id}-title`}>
               比赛规则
             </h1>
-            <p key="p" id={`${props.id}-content`} style={{textAlign: 'left'}}>
+            <div key="p" id={`${props.id}-content`} style={{textAlign: 'left',whiteSpace : "normal",wordBreak:"break-all",wordWrap:"break-word"}}>
               1、个人比赛，禁止讨论
               <br/>
               2、比赛时长4个小时、共12道题
@@ -58,9 +58,9 @@ class ContentRightRule extends React.Component {
               <br/>
               4、支持C/C++/Java三种语言
               <br/>
-              5、不允许使用u盘、手机等电子设备，但可携带最多两本纸质书籍。
-              <br/>
-            </p>
+              5、不允许使用u盘手机等电子设备,但可携带最多两本纸质书籍。
+
+            </div>
           </QueueAnim>
         </OverPack>
       </div>
