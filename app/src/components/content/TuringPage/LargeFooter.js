@@ -4,8 +4,11 @@ import OverPack from 'rc-scroll-anim/lib/ScrollOverPack'
 import QueueAnim from 'rc-queue-anim'
 import acmLongLogo from '../../../static/images/acm_logo_long_small.png'
 import scienceLogo from '../../../static/images/science-logo.png'
-import coorper1 from '../../../static/images/logo-turing.png'
-import coorper2 from '../../../static/images/logo-2.png'
+import coorper1 from '../../../static/images/zanzhu2.jpg'
+import coorper2 from '../../../static/images/zanzhu3.jpg'
+import coorper3 from '../../../static/images/zanzhu1.jpg'
+import coorper4 from '../../../static/images/logo-2.png'
+
 
 class LargeFooter extends React.Component {
   static propTypes = {
@@ -81,25 +84,28 @@ class LargeFooter extends React.Component {
 
         { turingChildrenToRender }
         <li key={`${this.props.id}-block`} id={`${this.props.id}-block`}>
-          <h2></h2>
+          <h2>赞助单位</h2>
           <ul>
             <li>
-              {/*<img width={250} src={coorper2} />*/}
-
-
-
-
+              <img width={100} src={coorper1} />
               <br />
+              秦皇岛数据产业研究所有限公司
             </li>
+
           </ul>
         </li>
         <li key={'cooper'} id={`${this.props.id}-cooper`}>
-
-          {/*<ul>*/}
-            {/*<li><img width={250} src={coorper1 } /></li>*/}
-            {/*/!*<li>More</li>*!/*/}
-          {/*</ul>*/}
+          <h2> 赞助单位 </h2>
+          <ul>
+            <li>
+              <img width={100} src={coorper2 } />
+              <br />
+              国投盈信秦皇岛科技有限公司
+              <img width={100} src={coorper4 } />
+            </li>
+          </ul>
         </li>
+
       </QueueAnim>
       <TweenOne
         animation={{y: '+=30', opacity: 0, type: 'from'}}
