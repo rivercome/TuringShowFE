@@ -72,7 +72,7 @@ class BannerLeft extends React.Component {
         >
           {/*<Link to="/rule">更有创新赛制</Link>*/}
           <br />
-          <span style={{fontSize: 20}}>等你来战</span>
+          <span style={{fontSize: 20}}>12月3日12：00等你来战！</span>
 
 
 

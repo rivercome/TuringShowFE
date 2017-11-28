@@ -103,13 +103,14 @@ class ApplyTuring extends React.Component {
         <div className="form-content-header" key="form-content-header">
           <div className="form-content-header-title">
             第五届图灵杯 NEUQ-ACM 程序设计竞赛（个人赛）
-            <br />
+
             暨 第九届蓝桥杯校内选拔赛
           </div>
           <br />
           <div className="form-content-header-extra">
             <Link to="/applyOnline">网络赛报名</Link>
-            <Link to="/rule">点此查看比赛规则</Link>
+            <Link to="/rule">比赛规则</Link>
+             12月3日12：00 准时开赛！
           </div>
         </div>
 

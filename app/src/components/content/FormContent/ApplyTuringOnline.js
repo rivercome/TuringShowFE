@@ -108,7 +108,8 @@ class ApplyTuringOnline extends React.Component {
           <br />
           <div className="form-content-header-extra">
             <Link to="/applyTuring">现场赛报名</Link>
-            <Link to="/rule">点此查看比赛规则</Link>
+            <Link to="/rule">比赛规则</Link>
+            12月3日12：00准时开赛
           </div>
         </div>
         <FormItem

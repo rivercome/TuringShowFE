@@ -53,7 +53,7 @@ const Rule = (props) => {
             <br />
             4、 打开电脑桌面上的“图灵杯”文件夹根据提示操作
             <br />
-            5、 比赛时间4个小时，在最后一小时封榜，不实时更新排名
+            5、 比赛时间4个小时，在最后40分钟封榜，不实时更新排名
             <br />
             6、 等待短信通知并出席颁奖典礼。
           </p>
@@ -68,9 +68,9 @@ const Rule = (props) => {
             2、 比赛时长4个小时、共12道题
             <br />
 
-            3、 本次比赛现场使用NEUQ-OJ（http://oj.acmclub.cn），
+            3、 本次比赛现场使用<a href="http://oj.acmclub.cn">NEUQ-OJ</a>
             <br />
-            网络赛使用newoj(http://http://newoj.acmclub.cn/)
+            网络赛使用 <a href="http://newoj.acmclub.cn/">NEW OJ</a>
             <br />
             参赛队员需预先报名、在现场使用比赛账号参赛，否则不计入成绩
             <br />

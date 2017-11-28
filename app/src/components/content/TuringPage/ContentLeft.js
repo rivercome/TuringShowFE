@@ -41,11 +41,16 @@ class ContentLeft extends React.Component {
             <p key="p" id={`${props.id}-content`}>
 
               <br />
-              1.百度传课搜索【NEUQ-ACMClub SummerCamp 2017新生编程训练营】
-              链接：<a >https://chuanke.baidu.com/1089085-229477.html#cart</a>
+
+              1. <a href="https://chuanke.baidu.com/1089085-229477.html#cart">
+              「NEUQ-ACMClub SummerCamp 2017新生编程训练营」
+            </a>
               <br />
-              2.newoj
-              链接：<a>http://newoj.acmclub.cn/</a>
+              0基础快速入门
+              <br />
+              2.<a href="http://newoj.acmclub.cn/">newoj平台快速提升自己编程算法的能力</a>
+              <br />
+              你就是下一个大神
             </p>
           </QueueAnim>
           <TweenOne
