@@ -4,10 +4,12 @@ import OverPack from 'rc-scroll-anim/lib/ScrollOverPack'
 import QueueAnim from 'rc-queue-anim'
 import acmLongLogo from '../../../static/images/acm_logo_long_small.png'
 import scienceLogo from '../../../static/images/science-logo.png'
-import coorper1 from '../../../static/images/zanzhu2.jpg'
-import coorper2 from '../../../static/images/zanzhu3.jpg'
-import coorper3 from '../../../static/images/zanzhu1.jpg'
-import coorper4 from '../../../static/images/logo-2.png'
+import coorper0 from '../../../static/images/zanzhu0.png'
+// import coorper2 from '../../../static/images/zanzhu2.png'
+// import coorper3 from '../../../static/images/zanzhu3.png'
+// import coorper4 from '../../../static/images/zanzhu4.png'
+
+
 
 
 class LargeFooter extends React.Component {
@@ -85,25 +87,36 @@ class LargeFooter extends React.Component {
         { turingChildrenToRender }
         <li key={`${this.props.id}-block`} id={`${this.props.id}-block`}>
           <h2>赞助单位</h2>
-          <ul>
-            <li>
-              <img width={100} src={coorper1} />
+              <img width={220} src={coorper0} />
               <br />
-              秦皇岛数据产业研究所有限公司
-            </li>
+          甲骨文股份有限公司
+          <br />
+          国投盈信秦皇岛科技有限公司
+          <br />
+          秦皇岛数据产业研究院有限公司
+          <br />
+          惠达教育
+          <br />
+              {/*<img width={60} src={coorper3} />*/}
+              {/*<br />*/}
 
-          </ul>
         </li>
         <li key={'cooper'} id={`${this.props.id}-cooper`}>
-          <h2> 赞助单位 </h2>
-          <ul>
-            <li>
-              <img width={100} src={coorper2 } />
-              <br />
-              国投盈信秦皇岛科技有限公司
-              <img width={100} src={coorper4 } />
-            </li>
-          </ul>
+          {/*<h2> 赞助单位</h2>*/}
+          {/*<ul>*/}
+            {/*<li>*/}
+              {/*<img width={70} src={coorper2} />*/}
+              {/*<br />*/}
+
+
+            {/*</li>*/}
+            {/*<li>*/}
+              {/*<img width={80} src={coorper4} />*/}
+              {/*<br />*/}
+
+
+            {/*</li>*/}
+          {/*</ul>*/}
         </li>
 
       </QueueAnim>

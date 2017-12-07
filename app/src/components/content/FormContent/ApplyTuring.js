@@ -3,7 +3,6 @@
  */
 import { Button, Cascader, Col, Form, Input, message, Radio, Row } from 'antd'
 import React from 'react'
-
 import QueueAnim from 'rc-queue-anim'
 import { Link } from 'react-router'
 import 'whatwg-fetch'
@@ -12,7 +11,6 @@ import verify from '../../../utils/Verify'
 import options from '../../../utils/turningOptions'
 import goto from '../../../utils/goto'
 import '../../../static/css/applyTurning.css'
-
 const FormItem = Form.Item
 const RadioGroup = Radio.Group
 
@@ -30,6 +28,8 @@ class ApplyTuring extends React.Component {
   handleSubmit (e) {
     e.preventDefault()
     this.setState({loading: true})
+
+    //与后端的数据传输
 
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (err) {} else {
@@ -108,9 +108,25 @@ class ApplyTuring extends React.Component {
           </div>
           <br />
           <div className="form-content-header-extra">
-            <Link to="/applyOnline">网络赛报名</Link>
-            <Link to="/rule">比赛规则</Link>
-             12月3日12：00 准时开赛！
+            <Row gutter={6}>
+              <Col className="gutter-row"
+                   span={26} >
+                <div className="gutter-box">
+                  <Link to="/applyOnline">网络赛报名</Link>
+                </div>
+              </Col>
+
+              <Col className="gutter-row"
+                   span={26}
+                   push={8}>
+                <div className="gutter-box">
+                  <Link to="/rule">比赛规则</Link>
+                </div>
+              </Col>
+
+            </Row>
+            12月3日12：00 准时开赛！
+
           </div>
         </div>
 

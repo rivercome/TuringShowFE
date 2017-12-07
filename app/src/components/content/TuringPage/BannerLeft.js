@@ -8,6 +8,14 @@ import 'rc-banner-anim/assets/index.css'
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack'
 import goto from '../../../utils/goto'
 import logoOracle from '../../../static/images/acm_logo_long_small.png'
+import coorper1 from '../../../static/images/logo-2-small.png'
+import coorper2 from '../../../static/images/zanzhu1.png'
+import coorper3 from '../../../static/images/zanzhu2.png'
+import coorper4 from '../../../static/images/zanzhu4.png'
+
+
+
+
 const BgElement = Element.BgElement
 class BannerLeft extends React.Component {
 
@@ -52,13 +60,16 @@ class BannerLeft extends React.Component {
         id={`${props.id}-wrapperBlock0`}
       >
         <img src={logoOracle} style={{maxWidth: 200}}/>
+
+
+
         <br />
-        <span
-          className="logo"
-          key="logo"
-          id={`${props.id}-titleBlock0`}
-          style={{fontSize: 20}}
-        >
+          <span
+            className="logo"
+            key="logo"
+            id={`${props.id}-titleBlock0`}
+            style={{fontSize: 20}}
+          >
           第五届『图灵杯』
           <br />
           NEUQ-ACM程序设计竞赛(个人赛)暨
@@ -73,28 +84,26 @@ class BannerLeft extends React.Component {
           {/*<Link to="/rule">更有创新赛制</Link>*/}
           <br />
           <span style={{fontSize: 20}}>12月3日12：00等你来战！</span>
-
-
-
-          <br />
-          一个人 四小时 十二道题 一场实力的较量!
           <br />
 
           本次比赛福利多多
+         <ul>
+          <li>
           <br />
-          ->冠，亚，季军机械键盘
+          冠，亚，季军机械键盘
           <br />
-          ->校级奖项学分奖励
+          校级奖项学分奖励
           <br />
-          ->最强班级超巨型零食大礼包
-
+          最强班级超巨型零食大礼包
+          </li>
+         </ul>
         </p>
         <Button
           type="ghost"
           key="button"
           size="large"
           style={{marginRight: 20}}
-          onClick={() => goto('/applyTuring')}
+          onClick={() => goto('/rule')}
           id={`${props.id}-buttonBlock0`}
         >
           报名现场赛
@@ -104,7 +113,7 @@ class BannerLeft extends React.Component {
           ghost size='large'
           key="button-online"
           id={`${props.id}-button-online`}
-                onClick={() => goto('/applyOnline')}>
+          onClick={() => goto('/rule')}>
           报名网络赛
         </Button>
         <br />
@@ -130,7 +139,19 @@ class BannerLeft extends React.Component {
           <a href="http://newoj.acmclub.cn">新 OJ 入口</a>
         </Button>
         <br />
-        <br />
+        <span
+          className="logo"
+          key="logo_picture"
+          id={`${props.id}-titleBlock0`}
+          style={{fontSize: 20}}
+        >
+          <br />
+          赞助单位
+        </span>
+        <img src={coorper1} style={{maxWidth: 70}}/>&nbsp;
+        <img src={coorper2} style={{maxWidth: 30}}/>&nbsp;
+        <img src={coorper3} style={{maxWidth: 30}}/>&nbsp;
+        <img src={coorper4} style={{maxWidth: 30}}/>
 
       </QueueAnim>
     </Element>)
